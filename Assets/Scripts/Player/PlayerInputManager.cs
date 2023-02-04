@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputManager : MonoBehaviour
 {
     [SerializeField] private Dictionary<string, Player> playersByPlayerId;
+    [SerializeField] private List<string> playerIds;
     [SerializeField] private GameObject playerPrefab;
     private PlayerController controls;
 
@@ -33,7 +34,13 @@ public class PlayerInputManager : MonoBehaviour
         controls.Player.JoinPlayer4.performed += ctx => RegisterPlayer(4 + "" + ctx.control.device.deviceId, ctx);
 
         playersByPlayerId = new Dictionary<string, Player>();
-
+        playerIds = new List<string>();
+        int playerSlot = 1;
+        foreach (var playerDevice in Gamepad.all)
+        {
+            playerIds.Add((playerSlot++) + "" + playerDevice.deviceId);
+            playerIds.Add((playerSlot++) + "" + playerDevice.deviceId);
+        }
         //Debug.Log("Gamepad.all.Count: " + Gamepad.all.Count + " Gamepad 1 Id: " + Gamepad.all[0].deviceId + " Gamepad 2 Id: " + Gamepad.all[0].deviceId)
     }
 
@@ -43,9 +50,31 @@ public class PlayerInputManager : MonoBehaviour
         int deviceId = ctx.control.device.deviceId;
         Debug.Log("Device Id: " + deviceId + " Player Id: " + playerId + " Button: " + ctx.action.name);
 
-        switch (playerId)
+        if (playerId == playerIds[0])
         {
-            case "19":
+            Debug.Log("PLayer 1");
+            AddPlayer(playerId);
+        }
+        else if (playerId == playerIds[1])
+        {
+            Debug.Log("PLayer 2");
+            AddPlayer(playerId);
+        }
+        else if (playerId == playerIds[2])
+        {
+            Debug.Log("PLayer 3");
+            AddPlayer(playerId);
+        }
+        else if (playerId == playerIds[3])
+        {
+            Debug.Log("PLayer 4");
+            AddPlayer(playerId);
+        }
+
+        //! device id changes if unity gets restarted (no idea how this behaves in build)
+        /*switch (playerId)
+        {
+            case playerIds[0]:
                 Debug.Log("PLayer 1");
                 AddPlayer(playerId);
                 break;
@@ -63,7 +92,7 @@ public class PlayerInputManager : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }*/
     }
 
     private void AddPlayer(string playerId)
@@ -83,7 +112,9 @@ public class PlayerInputManager : MonoBehaviour
     private void RemovePlayer(string playerId)
     {
         Player playerToRemove = playersByPlayerId[playerId];
-        Debug.Log(playerToRemove.transform.name + " was removed");
+        Debug.Log(playerToRemove.transform.name + " gets removed");
+        Destroy(playerToRemove.gameObject);
+        playersByPlayerId.Remove(playerId);
     }
 
     private void MovePlayer(string playerId, Vector2 moveInput)
