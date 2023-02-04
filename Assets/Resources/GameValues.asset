@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: GameValues
   m_EditorClassIdentifier: 
   <MaxPlayerControllerCount>k__BackingField: 2
-  <MovingSpeed>k__BackingField: 113.8
+  <MovingSpeed>k__BackingField: 90
   <TurnSpeed>k__BackingField: 0.2
   <PlayerMass>k__BackingField: 50
-  <PlayerCutRange>k__BackingField: 1
+  <PlayerCutRange>k__BackingField: 4
   <SomeValue>k__BackingField: 1
   <FuelBurnRate>k__BackingField: 1
   <FuelFillSpeed>k__BackingField: 3
-  <FireFuelDrain>k__BackingField: 1
-  <FireFuelStartAmount>k__BackingField: 10
-  <FireLightIntensityFactor>k__BackingField: 1
+  <FireFuelDrain>k__BackingField: 0.1
+  <FireFuelStartAmount>k__BackingField: 50
+  <FireLightIntensityFactor>k__BackingField: 11.81
   <FireLightRangeFactor>k__BackingField: 10
+  <FireSizeFactor>k__BackingField: 0.313

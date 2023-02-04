@@ -16,6 +16,7 @@ public class Interaction : MonoBehaviour
     {
         _player = gameObject;
         _planeTransform = transform.Find("Blade");
+        _cutRange = gameValues.PlayerCutRange;
     }
 
     private void Update()
@@ -37,11 +38,12 @@ public class Interaction : MonoBehaviour
 
     public void TrySplitObject()
     {
+        _cutRange = gameValues.PlayerCutRange;
         RaycastHit hit;
         Vector3 playerDirection = _player.transform.forward;
-        _cutRange = gameValues.PlayerCutRange;
         if (Physics.Raycast(_planeTransform.position, playerDirection.normalized, out hit, _cutRange))
         {
+            Debug.Log("Ray Hit: " + hit.transform.name);
             SplittableBase splittable = hit.transform.GetComponentInParent<SplittableBase>();
             if (splittable != null)
             {

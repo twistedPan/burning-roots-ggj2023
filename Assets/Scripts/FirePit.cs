@@ -37,7 +37,7 @@ public class FirePit : MonoBehaviour
 
     private void updateFire()
     {
-        _flames.transform.localScale = new Vector3(_currentFuelLevel, _currentFuelLevel, _currentFuelLevel);
+        _flames.transform.localScale = new Vector3(_currentFuelLevel, _currentFuelLevel, _currentFuelLevel) * gameValues.FireSizeFactor;
         _light.range = _currentFuelLevel * gameValues.FireLightRangeFactor;
         _light.intensity = _currentFuelLevel * gameValues.FireLightIntensityFactor;
 
