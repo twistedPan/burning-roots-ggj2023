@@ -21,6 +21,7 @@ namespace JL.Splitting
         private void Awake()
         {
             _meshSplitter = new MeshSplitter(CapUVMin, CapUVMax);
+            targetMeshFilter = GetComponent<MeshFilter>();
         }
 
         /// <summary>

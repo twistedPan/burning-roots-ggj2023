@@ -4,20 +4,19 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public string PlayerId;
-    [SerializeField] private float movingSpeed = 5;
+    [SerializeField] private float movingSpeed = 85f;
     private Transform playerTransform;
     private Rigidbody rigidBody;
+    private Interaction cutInteraction;
     private Vector2 movement;
-    [SerializeField] private float turnSmoothTime = 0.1f;
+    private float turnSmoothTime = 0.15f;
     private float turnSmoothVeloc;
-
-    // For Fun
-    [SerializeField] private GameObject bulletPrefab;
 
     void Start()
     {
         playerTransform = transform;
         rigidBody = GetComponent<Rigidbody>();
+        cutInteraction = GetComponent<Interaction>();
     }
 
     void FixedUpdate()
@@ -44,10 +43,7 @@ public class Player : MonoBehaviour
 
     public void Action()
     {
-        Debug.Log(transform.name + ": I do ze aktion!");
-
-        // haha
-        GameObject bullet = Instantiate(bulletPrefab, transform.position + transform.forward, Quaternion.identity);
-        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 100, ForceMode.Impulse);
+        //Debug.Log(transform.name + ": I do ze aktion!");
+        cutInteraction.TrySplitObject();
     }
 }

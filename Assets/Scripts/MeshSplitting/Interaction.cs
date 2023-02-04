@@ -8,23 +8,29 @@ public class Interaction : MonoBehaviour
 {
     [SerializeField] private bool _splitAsync = true;
     [SerializeField] private float _cutRange = 10f;
-    [SerializeField] private GameObject _player = null;
-    [SerializeField] private Transform _planeTransform = null;
+    private Transform _planeTransform = null;
+    private GameObject _player = null;
+
+    private void Start()
+    {
+        _player = gameObject;
+        _planeTransform = transform.Find("Blade");
+    }
 
     private void Update()
     {
-        //Vector3 playerPosition = _player.transform.position;
-        //Vector3 playerDirection = _player.transform.forward;
+        Vector3 playerPosition = _planeTransform.position;
+        Vector3 playerDirection = _player.transform.forward;
 
-        //RaycastHit hit;
-        //if (Physics.Raycast(playerPosition, playerDirection.normalized, out hit, _cutRange))
-        //{
-        //    Debug.DrawRay(playerPosition, playerDirection * _cutRange, Color.red);
-        //}
-        //else
-        //{
-        //    Debug.DrawRay(playerPosition, playerDirection * _cutRange, Color.green);
-        //}
+        RaycastHit hit;
+        if (Physics.Raycast(playerPosition, playerDirection.normalized, out hit, _cutRange))
+        {
+            Debug.DrawRay(playerPosition, playerDirection * _cutRange, Color.red);
+        }
+        else
+        {
+            Debug.DrawRay(playerPosition, playerDirection * _cutRange, Color.green);
+        }
     }
 
 
@@ -34,7 +40,7 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         Vector3 playerPosition = _player.transform.position;
         Vector3 playerDirection = _player.transform.forward;
-        if (Physics.Raycast(playerPosition, playerDirection.normalized, out hit, _cutRange))
+        if (Physics.Raycast(_planeTransform.position, playerDirection.normalized, out hit, _cutRange))
         {
             SplittableBase splittable = hit.transform.GetComponentInParent<SplittableBase>();
             if (splittable != null)
