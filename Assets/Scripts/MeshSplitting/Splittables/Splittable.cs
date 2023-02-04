@@ -22,6 +22,11 @@ namespace JL.Splitting
         {
             _meshSplitter = new MeshSplitter(CapUVMin, CapUVMax);
             targetMeshFilter = GetComponent<MeshFilter>();
+            if (targetMeshFilter == null)
+            {
+                targetMeshFilter = transform.GetComponentInChildren<MeshFilter>();
+            }
+
         }
 
         /// <summary>
