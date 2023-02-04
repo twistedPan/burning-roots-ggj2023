@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public string PlayerId;
     [SerializeField] private float movingSpeed = 5;
     private Transform playerTransform;
     private Rigidbody rigidBody;
     private Vector2 movement;
-    private float turnSmoothTime = 0.1f;
+    [SerializeField] private float turnSmoothTime = 0.1f;
     private float turnSmoothVeloc;
 
     // For Fun
@@ -32,10 +33,10 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
 
-        rigidBody.velocity = new Vector3(moveForce.x, 0, moveForce.z);
+        rigidBody.velocity = new Vector3(moveForce.x, rigidBody.velocity.y, moveForce.z);
     }
 
-    public void MoveByInput(Vector2 input)
+    public void SetPlayerMoveInput(Vector2 input)
     {
         //Debug.Log("Input at " + transform.name + " is " + input);
         movement = input;

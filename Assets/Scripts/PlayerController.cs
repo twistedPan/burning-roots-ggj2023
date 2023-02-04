@@ -15,7 +15,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
     ""name"": ""PlayerController"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""Player1"",
             ""id"": ""7ccf1d88-0d80-4522-a74e-5e572bf62573"",
             ""actions"": [
                 {
@@ -35,30 +35,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MovePlayer3"",
-                    ""type"": ""Value"",
-                    ""id"": ""682e7a69-dd76-4a33-a5e3-fee54af380ca"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""MovePlayer4"",
-                    ""type"": ""Value"",
-                    ""id"": ""39104846-73c9-4558-85d0-9b870e83587a"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""ExitGame"",
-                    ""type"": ""Button"",
-                    ""id"": ""a24d837d-ed8b-40f7-93a6-8fb496fec7b2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""JoinPlayer1"",
                     ""type"": ""Button"",
                     ""id"": ""d2035b38-c253-4248-a1bd-aa3ad415730a"",
@@ -70,22 +46,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""name"": ""JoinPlayer2"",
                     ""type"": ""Button"",
                     ""id"": ""5def77bd-2a45-4846-97bd-85cacb2ec156"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""JoinPlayer3"",
-                    ""type"": ""Button"",
-                    ""id"": ""5990bd6d-4eea-4409-86e7-45bc51692a95"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""JoinPlayer4"",
-                    ""type"": ""Button"",
-                    ""id"": ""f61f046d-b220-4213-b5ac-9cd37a770845"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -107,17 +67,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""ActionPlayer3"",
+                    ""name"": ""ExitGame"",
                     ""type"": ""Button"",
-                    ""id"": ""a19662c2-d1d3-4c4c-b4cc-0746d6d9550f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""ActionPlayer4"",
-                    ""type"": ""Button"",
-                    ""id"": ""dd77d2a0-3234-4439-902f-59ccc50d70a8"",
+                    ""id"": ""a24d837d-ed8b-40f7-93a6-8fb496fec7b2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -236,50 +188,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8f1d18e0-ef35-4a90-9e18-15dc02db465f"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ExitGame"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ec903923-25b2-4fa0-8453-3b7cdde17b53"",
-                    ""path"": ""<Gamepad>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""ExitGame"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""89d6bc44-4697-42ff-b9af-90165193aff3"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""MovePlayer3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0c093da7-2259-4d37-90be-ba2062dc59f1"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""MovePlayer4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""fab55c34-dc4c-4cb9-af85-dd392f002b40"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
@@ -313,28 +221,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""264ac26c-d201-4ce0-b1cb-a7eacfaac72e"",
-                    ""path"": ""<Gamepad>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""JoinPlayer3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""324c3681-c8d0-449c-83cf-b0b2af51f281"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""JoinPlayer4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""14cf519a-ac30-4ddb-9c6e-68f505005e48"",
                     ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
@@ -357,23 +243,175 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bd973816-9607-470a-8c58-58ca08a6d3af"",
+                    ""id"": ""8f1d18e0-ef35-4a90-9e18-15dc02db465f"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ExitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ec903923-25b2-4fa0-8453-3b7cdde17b53"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ExitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player2"",
+            ""id"": ""9eee3e40-438b-48b6-940d-71037153527f"",
+            ""actions"": [
+                {
+                    ""name"": ""MovePlayer3"",
+                    ""type"": ""Value"",
+                    ""id"": ""31fd068e-8f71-47b5-bf2e-2d2daf87c74c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MovePlayer4"",
+                    ""type"": ""Value"",
+                    ""id"": ""ba8b2f07-1032-4a5b-8b18-9a3cc5acd896"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""JoinPlayer3"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4cfb7c0-3d93-40e6-a770-533a03843ede"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""JoinPlayer4"",
+                    ""type"": ""Button"",
+                    ""id"": ""60b27644-5783-4be0-bf40-c2aa8cdee198"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ActionPlayer3"",
+                    ""type"": ""Button"",
+                    ""id"": ""117c8e19-59f0-4d26-9c33-b92d0796cc7d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ActionPlayer4"",
+                    ""type"": ""Button"",
+                    ""id"": ""5cf6e654-3f52-469b-9c5e-48e2e1db2798"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ExitGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""ebea6f71-7719-4dcc-8056-2383faf90f62"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""df5c0368-29b5-4333-9839-591170ffb058"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ActionPlayer4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3e78919-609c-4bf0-a69b-0b9799c20c87"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ExitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e37e2d55-85ff-48f3-a854-b51a23cfb549"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ExitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""291b5e97-a006-4fcb-8619-241ea37ee372"",
                     ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""ActionPlayer3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""12d954d7-16a8-432c-a88d-085d1abeb943"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""id"": ""c9f767b3-26cb-4c97-a41d-ff0e6d39019a"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ActionPlayer4"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""MovePlayer3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33cfc9cb-6810-428f-a562-249a81cdb022"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""MovePlayer4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2643d3a-2901-4e9a-be63-b4c19c46b184"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""JoinPlayer3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""978bd2cc-64fa-41a4-ad99-ccc36be35f1c"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""JoinPlayer4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -775,17 +813,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5693e57a-238a-46ed-b5ae-e64e6e574302"",
-                    ""path"": ""<Touchscreen>/touch*/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Point"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""4faf7dc9-b979-4210-aa8c-e808e1ef89f5"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
@@ -802,28 +829,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""47c2a644-3ebc-4dae-a106-589b7ca75b59"",
-                    ""path"": ""<Touchscreen>/touch*/press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Touch"",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bb9e6b34-44bf-4381-ac63-5aa15d19f677"",
-                    ""path"": ""<XRController>/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -860,28 +865,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""action"": ""RightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7236c0d9-6ca3-47cf-a6ee-a97f5b59ea77"",
-                    ""path"": ""<XRController>/devicePosition"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
-                    ""action"": ""TrackedDevicePosition"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""23e01e3a-f935-4948-8d8b-9bcac77714fb"",
-                    ""path"": ""<XRController>/deviceRotation"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
-                    ""action"": ""TrackedDeviceOrientation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -915,17 +898,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
             ]
         },
         {
-            ""name"": ""Touch"",
-            ""bindingGroup"": ""Touch"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Touchscreen>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
-        },
-        {
             ""name"": ""Joystick"",
             ""bindingGroup"": ""Joystick"",
             ""devices"": [
@@ -937,11 +909,22 @@ public class @PlayerController : IInputActionCollection, IDisposable
             ]
         },
         {
-            ""name"": ""XR"",
-            ""bindingGroup"": ""XR"",
+            ""name"": ""Gamepad 2"",
+            ""bindingGroup"": ""Gamepad 2"",
             ""devices"": [
                 {
-                    ""devicePath"": ""<XRController>"",
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad Backup"",
+            ""bindingGroup"": ""Gamepad Backup"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -949,21 +932,24 @@ public class @PlayerController : IInputActionCollection, IDisposable
         }
     ]
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_MovePlayer1 = m_Player.FindAction("MovePlayer1", throwIfNotFound: true);
-        m_Player_MovePlayer2 = m_Player.FindAction("MovePlayer2", throwIfNotFound: true);
-        m_Player_MovePlayer3 = m_Player.FindAction("MovePlayer3", throwIfNotFound: true);
-        m_Player_MovePlayer4 = m_Player.FindAction("MovePlayer4", throwIfNotFound: true);
-        m_Player_ExitGame = m_Player.FindAction("ExitGame", throwIfNotFound: true);
-        m_Player_JoinPlayer1 = m_Player.FindAction("JoinPlayer1", throwIfNotFound: true);
-        m_Player_JoinPlayer2 = m_Player.FindAction("JoinPlayer2", throwIfNotFound: true);
-        m_Player_JoinPlayer3 = m_Player.FindAction("JoinPlayer3", throwIfNotFound: true);
-        m_Player_JoinPlayer4 = m_Player.FindAction("JoinPlayer4", throwIfNotFound: true);
-        m_Player_ActionPlayer1 = m_Player.FindAction("ActionPlayer1", throwIfNotFound: true);
-        m_Player_ActionPlayer2 = m_Player.FindAction("ActionPlayer2", throwIfNotFound: true);
-        m_Player_ActionPlayer3 = m_Player.FindAction("ActionPlayer3", throwIfNotFound: true);
-        m_Player_ActionPlayer4 = m_Player.FindAction("ActionPlayer4", throwIfNotFound: true);
+        // Player1
+        m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
+        m_Player1_MovePlayer1 = m_Player1.FindAction("MovePlayer1", throwIfNotFound: true);
+        m_Player1_MovePlayer2 = m_Player1.FindAction("MovePlayer2", throwIfNotFound: true);
+        m_Player1_JoinPlayer1 = m_Player1.FindAction("JoinPlayer1", throwIfNotFound: true);
+        m_Player1_JoinPlayer2 = m_Player1.FindAction("JoinPlayer2", throwIfNotFound: true);
+        m_Player1_ActionPlayer1 = m_Player1.FindAction("ActionPlayer1", throwIfNotFound: true);
+        m_Player1_ActionPlayer2 = m_Player1.FindAction("ActionPlayer2", throwIfNotFound: true);
+        m_Player1_ExitGame = m_Player1.FindAction("ExitGame", throwIfNotFound: true);
+        // Player2
+        m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
+        m_Player2_MovePlayer3 = m_Player2.FindAction("MovePlayer3", throwIfNotFound: true);
+        m_Player2_MovePlayer4 = m_Player2.FindAction("MovePlayer4", throwIfNotFound: true);
+        m_Player2_JoinPlayer3 = m_Player2.FindAction("JoinPlayer3", throwIfNotFound: true);
+        m_Player2_JoinPlayer4 = m_Player2.FindAction("JoinPlayer4", throwIfNotFound: true);
+        m_Player2_ActionPlayer3 = m_Player2.FindAction("ActionPlayer3", throwIfNotFound: true);
+        m_Player2_ActionPlayer4 = m_Player2.FindAction("ActionPlayer4", throwIfNotFound: true);
+        m_Player2_ExitGame = m_Player2.FindAction("ExitGame", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1022,89 +1008,59 @@ public class @PlayerController : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_MovePlayer1;
-    private readonly InputAction m_Player_MovePlayer2;
-    private readonly InputAction m_Player_MovePlayer3;
-    private readonly InputAction m_Player_MovePlayer4;
-    private readonly InputAction m_Player_ExitGame;
-    private readonly InputAction m_Player_JoinPlayer1;
-    private readonly InputAction m_Player_JoinPlayer2;
-    private readonly InputAction m_Player_JoinPlayer3;
-    private readonly InputAction m_Player_JoinPlayer4;
-    private readonly InputAction m_Player_ActionPlayer1;
-    private readonly InputAction m_Player_ActionPlayer2;
-    private readonly InputAction m_Player_ActionPlayer3;
-    private readonly InputAction m_Player_ActionPlayer4;
-    public struct PlayerActions
+    // Player1
+    private readonly InputActionMap m_Player1;
+    private IPlayer1Actions m_Player1ActionsCallbackInterface;
+    private readonly InputAction m_Player1_MovePlayer1;
+    private readonly InputAction m_Player1_MovePlayer2;
+    private readonly InputAction m_Player1_JoinPlayer1;
+    private readonly InputAction m_Player1_JoinPlayer2;
+    private readonly InputAction m_Player1_ActionPlayer1;
+    private readonly InputAction m_Player1_ActionPlayer2;
+    private readonly InputAction m_Player1_ExitGame;
+    public struct Player1Actions
     {
         private @PlayerController m_Wrapper;
-        public PlayerActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MovePlayer1 => m_Wrapper.m_Player_MovePlayer1;
-        public InputAction @MovePlayer2 => m_Wrapper.m_Player_MovePlayer2;
-        public InputAction @MovePlayer3 => m_Wrapper.m_Player_MovePlayer3;
-        public InputAction @MovePlayer4 => m_Wrapper.m_Player_MovePlayer4;
-        public InputAction @ExitGame => m_Wrapper.m_Player_ExitGame;
-        public InputAction @JoinPlayer1 => m_Wrapper.m_Player_JoinPlayer1;
-        public InputAction @JoinPlayer2 => m_Wrapper.m_Player_JoinPlayer2;
-        public InputAction @JoinPlayer3 => m_Wrapper.m_Player_JoinPlayer3;
-        public InputAction @JoinPlayer4 => m_Wrapper.m_Player_JoinPlayer4;
-        public InputAction @ActionPlayer1 => m_Wrapper.m_Player_ActionPlayer1;
-        public InputAction @ActionPlayer2 => m_Wrapper.m_Player_ActionPlayer2;
-        public InputAction @ActionPlayer3 => m_Wrapper.m_Player_ActionPlayer3;
-        public InputAction @ActionPlayer4 => m_Wrapper.m_Player_ActionPlayer4;
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public Player1Actions(@PlayerController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MovePlayer1 => m_Wrapper.m_Player1_MovePlayer1;
+        public InputAction @MovePlayer2 => m_Wrapper.m_Player1_MovePlayer2;
+        public InputAction @JoinPlayer1 => m_Wrapper.m_Player1_JoinPlayer1;
+        public InputAction @JoinPlayer2 => m_Wrapper.m_Player1_JoinPlayer2;
+        public InputAction @ActionPlayer1 => m_Wrapper.m_Player1_ActionPlayer1;
+        public InputAction @ActionPlayer2 => m_Wrapper.m_Player1_ActionPlayer2;
+        public InputAction @ExitGame => m_Wrapper.m_Player1_ExitGame;
+        public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
-        public void SetCallbacks(IPlayerActions instance)
+        public static implicit operator InputActionMap(Player1Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer1Actions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
+            if (m_Wrapper.m_Player1ActionsCallbackInterface != null)
             {
-                @MovePlayer1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer1;
-                @MovePlayer1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer1;
-                @MovePlayer1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer1;
-                @MovePlayer2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer2;
-                @MovePlayer2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer2;
-                @MovePlayer2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer2;
-                @MovePlayer3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer3;
-                @MovePlayer3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer3;
-                @MovePlayer3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer3;
-                @MovePlayer4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer4;
-                @MovePlayer4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer4;
-                @MovePlayer4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovePlayer4;
-                @ExitGame.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnExitGame;
-                @ExitGame.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnExitGame;
-                @ExitGame.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnExitGame;
-                @JoinPlayer1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer1;
-                @JoinPlayer1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer1;
-                @JoinPlayer1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer1;
-                @JoinPlayer2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer2;
-                @JoinPlayer2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer2;
-                @JoinPlayer2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer2;
-                @JoinPlayer3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer3;
-                @JoinPlayer3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer3;
-                @JoinPlayer3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer3;
-                @JoinPlayer4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer4;
-                @JoinPlayer4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer4;
-                @JoinPlayer4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJoinPlayer4;
-                @ActionPlayer1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer1;
-                @ActionPlayer1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer1;
-                @ActionPlayer1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer1;
-                @ActionPlayer2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer2;
-                @ActionPlayer2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer2;
-                @ActionPlayer2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer2;
-                @ActionPlayer3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer3;
-                @ActionPlayer3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer3;
-                @ActionPlayer3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer3;
-                @ActionPlayer4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer4;
-                @ActionPlayer4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer4;
-                @ActionPlayer4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnActionPlayer4;
+                @MovePlayer1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovePlayer1;
+                @MovePlayer1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovePlayer1;
+                @MovePlayer1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovePlayer1;
+                @MovePlayer2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovePlayer2;
+                @MovePlayer2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovePlayer2;
+                @MovePlayer2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnMovePlayer2;
+                @JoinPlayer1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJoinPlayer1;
+                @JoinPlayer1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJoinPlayer1;
+                @JoinPlayer1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJoinPlayer1;
+                @JoinPlayer2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJoinPlayer2;
+                @JoinPlayer2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJoinPlayer2;
+                @JoinPlayer2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJoinPlayer2;
+                @ActionPlayer1.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnActionPlayer1;
+                @ActionPlayer1.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnActionPlayer1;
+                @ActionPlayer1.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnActionPlayer1;
+                @ActionPlayer2.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnActionPlayer2;
+                @ActionPlayer2.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnActionPlayer2;
+                @ActionPlayer2.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnActionPlayer2;
+                @ExitGame.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnExitGame;
+                @ExitGame.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnExitGame;
+                @ExitGame.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnExitGame;
             }
-            m_Wrapper.m_PlayerActionsCallbackInterface = instance;
+            m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @MovePlayer1.started += instance.OnMovePlayer1;
@@ -1113,43 +1069,106 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @MovePlayer2.started += instance.OnMovePlayer2;
                 @MovePlayer2.performed += instance.OnMovePlayer2;
                 @MovePlayer2.canceled += instance.OnMovePlayer2;
-                @MovePlayer3.started += instance.OnMovePlayer3;
-                @MovePlayer3.performed += instance.OnMovePlayer3;
-                @MovePlayer3.canceled += instance.OnMovePlayer3;
-                @MovePlayer4.started += instance.OnMovePlayer4;
-                @MovePlayer4.performed += instance.OnMovePlayer4;
-                @MovePlayer4.canceled += instance.OnMovePlayer4;
-                @ExitGame.started += instance.OnExitGame;
-                @ExitGame.performed += instance.OnExitGame;
-                @ExitGame.canceled += instance.OnExitGame;
                 @JoinPlayer1.started += instance.OnJoinPlayer1;
                 @JoinPlayer1.performed += instance.OnJoinPlayer1;
                 @JoinPlayer1.canceled += instance.OnJoinPlayer1;
                 @JoinPlayer2.started += instance.OnJoinPlayer2;
                 @JoinPlayer2.performed += instance.OnJoinPlayer2;
                 @JoinPlayer2.canceled += instance.OnJoinPlayer2;
-                @JoinPlayer3.started += instance.OnJoinPlayer3;
-                @JoinPlayer3.performed += instance.OnJoinPlayer3;
-                @JoinPlayer3.canceled += instance.OnJoinPlayer3;
-                @JoinPlayer4.started += instance.OnJoinPlayer4;
-                @JoinPlayer4.performed += instance.OnJoinPlayer4;
-                @JoinPlayer4.canceled += instance.OnJoinPlayer4;
                 @ActionPlayer1.started += instance.OnActionPlayer1;
                 @ActionPlayer1.performed += instance.OnActionPlayer1;
                 @ActionPlayer1.canceled += instance.OnActionPlayer1;
                 @ActionPlayer2.started += instance.OnActionPlayer2;
                 @ActionPlayer2.performed += instance.OnActionPlayer2;
                 @ActionPlayer2.canceled += instance.OnActionPlayer2;
+                @ExitGame.started += instance.OnExitGame;
+                @ExitGame.performed += instance.OnExitGame;
+                @ExitGame.canceled += instance.OnExitGame;
+            }
+        }
+    }
+    public Player1Actions @Player1 => new Player1Actions(this);
+
+    // Player2
+    private readonly InputActionMap m_Player2;
+    private IPlayer2Actions m_Player2ActionsCallbackInterface;
+    private readonly InputAction m_Player2_MovePlayer3;
+    private readonly InputAction m_Player2_MovePlayer4;
+    private readonly InputAction m_Player2_JoinPlayer3;
+    private readonly InputAction m_Player2_JoinPlayer4;
+    private readonly InputAction m_Player2_ActionPlayer3;
+    private readonly InputAction m_Player2_ActionPlayer4;
+    private readonly InputAction m_Player2_ExitGame;
+    public struct Player2Actions
+    {
+        private @PlayerController m_Wrapper;
+        public Player2Actions(@PlayerController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MovePlayer3 => m_Wrapper.m_Player2_MovePlayer3;
+        public InputAction @MovePlayer4 => m_Wrapper.m_Player2_MovePlayer4;
+        public InputAction @JoinPlayer3 => m_Wrapper.m_Player2_JoinPlayer3;
+        public InputAction @JoinPlayer4 => m_Wrapper.m_Player2_JoinPlayer4;
+        public InputAction @ActionPlayer3 => m_Wrapper.m_Player2_ActionPlayer3;
+        public InputAction @ActionPlayer4 => m_Wrapper.m_Player2_ActionPlayer4;
+        public InputAction @ExitGame => m_Wrapper.m_Player2_ExitGame;
+        public InputActionMap Get() { return m_Wrapper.m_Player2; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player2Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer2Actions instance)
+        {
+            if (m_Wrapper.m_Player2ActionsCallbackInterface != null)
+            {
+                @MovePlayer3.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMovePlayer3;
+                @MovePlayer3.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMovePlayer3;
+                @MovePlayer3.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMovePlayer3;
+                @MovePlayer4.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMovePlayer4;
+                @MovePlayer4.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMovePlayer4;
+                @MovePlayer4.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMovePlayer4;
+                @JoinPlayer3.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJoinPlayer3;
+                @JoinPlayer3.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJoinPlayer3;
+                @JoinPlayer3.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJoinPlayer3;
+                @JoinPlayer4.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJoinPlayer4;
+                @JoinPlayer4.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJoinPlayer4;
+                @JoinPlayer4.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJoinPlayer4;
+                @ActionPlayer3.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnActionPlayer3;
+                @ActionPlayer3.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnActionPlayer3;
+                @ActionPlayer3.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnActionPlayer3;
+                @ActionPlayer4.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnActionPlayer4;
+                @ActionPlayer4.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnActionPlayer4;
+                @ActionPlayer4.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnActionPlayer4;
+                @ExitGame.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnExitGame;
+                @ExitGame.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnExitGame;
+                @ExitGame.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnExitGame;
+            }
+            m_Wrapper.m_Player2ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @MovePlayer3.started += instance.OnMovePlayer3;
+                @MovePlayer3.performed += instance.OnMovePlayer3;
+                @MovePlayer3.canceled += instance.OnMovePlayer3;
+                @MovePlayer4.started += instance.OnMovePlayer4;
+                @MovePlayer4.performed += instance.OnMovePlayer4;
+                @MovePlayer4.canceled += instance.OnMovePlayer4;
+                @JoinPlayer3.started += instance.OnJoinPlayer3;
+                @JoinPlayer3.performed += instance.OnJoinPlayer3;
+                @JoinPlayer3.canceled += instance.OnJoinPlayer3;
+                @JoinPlayer4.started += instance.OnJoinPlayer4;
+                @JoinPlayer4.performed += instance.OnJoinPlayer4;
+                @JoinPlayer4.canceled += instance.OnJoinPlayer4;
                 @ActionPlayer3.started += instance.OnActionPlayer3;
                 @ActionPlayer3.performed += instance.OnActionPlayer3;
                 @ActionPlayer3.canceled += instance.OnActionPlayer3;
                 @ActionPlayer4.started += instance.OnActionPlayer4;
                 @ActionPlayer4.performed += instance.OnActionPlayer4;
                 @ActionPlayer4.canceled += instance.OnActionPlayer4;
+                @ExitGame.started += instance.OnExitGame;
+                @ExitGame.performed += instance.OnExitGame;
+                @ExitGame.canceled += instance.OnExitGame;
             }
         }
     }
-    public PlayerActions @Player => new PlayerActions(this);
+    public Player2Actions @Player2 => new Player2Actions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -1273,15 +1292,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
-    private int m_TouchSchemeIndex = -1;
-    public InputControlScheme TouchScheme
-    {
-        get
-        {
-            if (m_TouchSchemeIndex == -1) m_TouchSchemeIndex = asset.FindControlSchemeIndex("Touch");
-            return asset.controlSchemes[m_TouchSchemeIndex];
-        }
-    }
     private int m_JoystickSchemeIndex = -1;
     public InputControlScheme JoystickScheme
     {
@@ -1291,30 +1301,43 @@ public class @PlayerController : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_JoystickSchemeIndex];
         }
     }
-    private int m_XRSchemeIndex = -1;
-    public InputControlScheme XRScheme
+    private int m_Gamepad2SchemeIndex = -1;
+    public InputControlScheme Gamepad2Scheme
     {
         get
         {
-            if (m_XRSchemeIndex == -1) m_XRSchemeIndex = asset.FindControlSchemeIndex("XR");
-            return asset.controlSchemes[m_XRSchemeIndex];
+            if (m_Gamepad2SchemeIndex == -1) m_Gamepad2SchemeIndex = asset.FindControlSchemeIndex("Gamepad 2");
+            return asset.controlSchemes[m_Gamepad2SchemeIndex];
         }
     }
-    public interface IPlayerActions
+    private int m_GamepadBackupSchemeIndex = -1;
+    public InputControlScheme GamepadBackupScheme
+    {
+        get
+        {
+            if (m_GamepadBackupSchemeIndex == -1) m_GamepadBackupSchemeIndex = asset.FindControlSchemeIndex("Gamepad Backup");
+            return asset.controlSchemes[m_GamepadBackupSchemeIndex];
+        }
+    }
+    public interface IPlayer1Actions
     {
         void OnMovePlayer1(InputAction.CallbackContext context);
         void OnMovePlayer2(InputAction.CallbackContext context);
-        void OnMovePlayer3(InputAction.CallbackContext context);
-        void OnMovePlayer4(InputAction.CallbackContext context);
-        void OnExitGame(InputAction.CallbackContext context);
         void OnJoinPlayer1(InputAction.CallbackContext context);
         void OnJoinPlayer2(InputAction.CallbackContext context);
-        void OnJoinPlayer3(InputAction.CallbackContext context);
-        void OnJoinPlayer4(InputAction.CallbackContext context);
         void OnActionPlayer1(InputAction.CallbackContext context);
         void OnActionPlayer2(InputAction.CallbackContext context);
+        void OnExitGame(InputAction.CallbackContext context);
+    }
+    public interface IPlayer2Actions
+    {
+        void OnMovePlayer3(InputAction.CallbackContext context);
+        void OnMovePlayer4(InputAction.CallbackContext context);
+        void OnJoinPlayer3(InputAction.CallbackContext context);
+        void OnJoinPlayer4(InputAction.CallbackContext context);
         void OnActionPlayer3(InputAction.CallbackContext context);
         void OnActionPlayer4(InputAction.CallbackContext context);
+        void OnExitGame(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

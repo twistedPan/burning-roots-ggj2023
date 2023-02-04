@@ -2,7 +2,7 @@
     "name": "PlayerController",
     "maps": [
         {
-            "name": "Player",
+            "name": "Player1",
             "id": "7ccf1d88-0d80-4522-a74e-5e572bf62573",
             "actions": [
                 {
@@ -22,30 +22,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MovePlayer3",
-                    "type": "Value",
-                    "id": "682e7a69-dd76-4a33-a5e3-fee54af380ca",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "MovePlayer4",
-                    "type": "Value",
-                    "id": "39104846-73c9-4558-85d0-9b870e83587a",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "ExitGame",
-                    "type": "Button",
-                    "id": "a24d837d-ed8b-40f7-93a6-8fb496fec7b2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "JoinPlayer1",
                     "type": "Button",
                     "id": "d2035b38-c253-4248-a1bd-aa3ad415730a",
@@ -57,22 +33,6 @@
                     "name": "JoinPlayer2",
                     "type": "Button",
                     "id": "5def77bd-2a45-4846-97bd-85cacb2ec156",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "JoinPlayer3",
-                    "type": "Button",
-                    "id": "5990bd6d-4eea-4409-86e7-45bc51692a95",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "JoinPlayer4",
-                    "type": "Button",
-                    "id": "f61f046d-b220-4213-b5ac-9cd37a770845",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -94,17 +54,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ActionPlayer3",
+                    "name": "ExitGame",
                     "type": "Button",
-                    "id": "a19662c2-d1d3-4c4c-b4cc-0746d6d9550f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "ActionPlayer4",
-                    "type": "Button",
-                    "id": "dd77d2a0-3234-4439-902f-59ccc50d70a8",
+                    "id": "a24d837d-ed8b-40f7-93a6-8fb496fec7b2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -223,50 +175,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8f1d18e0-ef35-4a90-9e18-15dc02db465f",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ExitGame",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ec903923-25b2-4fa0-8453-3b7cdde17b53",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "ExitGame",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "89d6bc44-4697-42ff-b9af-90165193aff3",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "MovePlayer3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0c093da7-2259-4d37-90be-ba2062dc59f1",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "MovePlayer4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "fab55c34-dc4c-4cb9-af85-dd392f002b40",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
@@ -300,28 +208,6 @@
                 },
                 {
                     "name": "",
-                    "id": "264ac26c-d201-4ce0-b1cb-a7eacfaac72e",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "JoinPlayer3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "324c3681-c8d0-449c-83cf-b0b2af51f281",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "JoinPlayer4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "14cf519a-ac30-4ddb-9c6e-68f505005e48",
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
@@ -344,23 +230,175 @@
                 },
                 {
                     "name": "",
-                    "id": "bd973816-9607-470a-8c58-58ca08a6d3af",
+                    "id": "8f1d18e0-ef35-4a90-9e18-15dc02db465f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ExitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec903923-25b2-4fa0-8453-3b7cdde17b53",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ExitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "9eee3e40-438b-48b6-940d-71037153527f",
+            "actions": [
+                {
+                    "name": "MovePlayer3",
+                    "type": "Value",
+                    "id": "31fd068e-8f71-47b5-bf2e-2d2daf87c74c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MovePlayer4",
+                    "type": "Value",
+                    "id": "ba8b2f07-1032-4a5b-8b18-9a3cc5acd896",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "JoinPlayer3",
+                    "type": "Button",
+                    "id": "e4cfb7c0-3d93-40e6-a770-533a03843ede",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "JoinPlayer4",
+                    "type": "Button",
+                    "id": "60b27644-5783-4be0-bf40-c2aa8cdee198",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ActionPlayer3",
+                    "type": "Button",
+                    "id": "117c8e19-59f0-4d26-9c33-b92d0796cc7d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ActionPlayer4",
+                    "type": "Button",
+                    "id": "5cf6e654-3f52-469b-9c5e-48e2e1db2798",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ExitGame",
+                    "type": "Button",
+                    "id": "ebea6f71-7719-4dcc-8056-2383faf90f62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "df5c0368-29b5-4333-9839-591170ffb058",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ActionPlayer4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3e78919-609c-4bf0-a69b-0b9799c20c87",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ExitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e37e2d55-85ff-48f3-a854-b51a23cfb549",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ExitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "291b5e97-a006-4fcb-8619-241ea37ee372",
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "ActionPlayer3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "12d954d7-16a8-432c-a88d-085d1abeb943",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "c9f767b3-26cb-4c97-a41d-ff0e6d39019a",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "ActionPlayer4",
+                    "groups": "Gamepad",
+                    "action": "MovePlayer3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33cfc9cb-6810-428f-a562-249a81cdb022",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "MovePlayer4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2643d3a-2901-4e9a-be63-b4c19c46b184",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "JoinPlayer3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "978bd2cc-64fa-41a4-ad99-ccc36be35f1c",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "JoinPlayer4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -762,17 +800,6 @@
                 },
                 {
                     "name": "",
-                    "id": "5693e57a-238a-46ed-b5ae-e64e6e574302",
-                    "path": "<Touchscreen>/touch*/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4faf7dc9-b979-4210-aa8c-e808e1ef89f5",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -789,28 +816,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "47c2a644-3ebc-4dae-a106-589b7ca75b59",
-                    "path": "<Touchscreen>/touch*/press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bb9e6b34-44bf-4381-ac63-5aa15d19f677",
-                    "path": "<XRController>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -847,28 +852,6 @@
                     "action": "RightClick",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7236c0d9-6ca3-47cf-a6ee-a97f5b59ea77",
-                    "path": "<XRController>/devicePosition",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "TrackedDevicePosition",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "23e01e3a-f935-4948-8d8b-9bcac77714fb",
-                    "path": "<XRController>/deviceRotation",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "TrackedDeviceOrientation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
@@ -902,17 +885,6 @@
             ]
         },
         {
-            "name": "Touch",
-            "bindingGroup": "Touch",
-            "devices": [
-                {
-                    "devicePath": "<Touchscreen>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
             "name": "Joystick",
             "bindingGroup": "Joystick",
             "devices": [
@@ -924,11 +896,22 @@
             ]
         },
         {
-            "name": "XR",
-            "bindingGroup": "XR",
+            "name": "Gamepad 2",
+            "bindingGroup": "Gamepad 2",
             "devices": [
                 {
-                    "devicePath": "<XRController>",
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad Backup",
+            "bindingGroup": "Gamepad Backup",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }
