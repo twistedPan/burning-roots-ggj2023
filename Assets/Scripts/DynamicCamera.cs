@@ -7,7 +7,6 @@ using UnityEngine;
 public class DynamicCamera : MonoBehaviour
 {
     [SerializeField] private Dictionary<string, Transform> playerTransformsByPlayerId;
-    [SerializeField] private GameObject[] playerTransforms;
     [SerializeField] private float minZoom = 80f;
     [SerializeField] private float maxZoom = 10f;
     private float width = 0f;
@@ -27,11 +26,6 @@ public class DynamicCamera : MonoBehaviour
         cameraTransform = transform;
         centreBetweenPlayers = transform.position;
         cam = GetComponent<Camera>();
-
-        foreach (GameObject g in playerTransforms)
-        {
-            playerTransformsByPlayerId.Add(g.name, g.transform);
-        }
     }
 
     void LateUpdate()
