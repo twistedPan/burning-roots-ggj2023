@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -17,6 +18,8 @@ namespace JL.Splitting
         public bool generateMeshColliders = true;
 
         private MeshSplitter _meshSplitter = null;
+        private Rigidbody rb;
+        private MeshCollider meshCollider;
 
         private void Awake()
         {
@@ -26,7 +29,6 @@ namespace JL.Splitting
             {
                 targetMeshFilter = transform.GetComponentInChildren<MeshFilter>();
             }
-
         }
 
         /// <summary>

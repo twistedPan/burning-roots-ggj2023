@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameValues gameValues;
     public string PlayerId;
-    [SerializeField] private float movingSpeed = 85f;
     private Transform playerTransform;
     private Rigidbody rigidBody;
     private Interaction cutInteraction;
     private Vector2 movement;
-    private float turnSmoothTime = 0.15f;
     private float turnSmoothVeloc;
 
     void Start()
@@ -17,16 +16,17 @@ public class Player : MonoBehaviour
         playerTransform = transform;
         rigidBody = GetComponent<Rigidbody>();
         cutInteraction = GetComponent<Interaction>();
+        rigidBody.mass = gameValues.PlayerMass;
     }
 
     void FixedUpdate()
     {
         Vector3 direction = new Vector3(movement.x, 0, movement.y);
-        Vector3 moveForce = direction * (movingSpeed * 10 * Time.fixedDeltaTime);
+        Vector3 moveForce = direction * (gameValues.MovingSpeed * 10 * Time.fixedDeltaTime);
 
         //* Rotation
         float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVeloc, turnSmoothTime);
+        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVeloc, gameValues.TurnSpeed);
         if (direction.magnitude > 0)
         {
             transform.rotation = Quaternion.Euler(0f, angle, 0f);

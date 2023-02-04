@@ -218,7 +218,18 @@ namespace JL.Splitting
             meshFilter.sharedMesh = null;
 
             MeshCollider newCollider = go.AddComponent<MeshCollider>();
-            newCollider.convex = true;
+            Rigidbody rb = go.GetComponent<Rigidbody>();
+
+            if (rb.mass <= 100) // Weight Here
+            {
+                newCollider.convex = true;
+                rb.isKinematic = false;
+            }
+            else
+            {
+                newCollider.convex = false;
+                rb.isKinematic = true;
+            }
             newCollider.sharedMesh = mesh;
 
             meshFilter.sharedMesh = tempMesh;

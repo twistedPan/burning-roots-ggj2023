@@ -4,20 +4,30 @@ using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] private GameValues gameValues;
     [SerializeField] private List<string> playerIds;
     [SerializeField] private GameObject playerPrefab;
     private List<PlayerInput> playerPairs;
     [SerializeField] private float spawnRadius = 8f;
+    private PlayerInputManager playerInputManager;
 
     void Awake()
     {
         playerPairs = new List<PlayerInput>();
+        playerInputManager = GetComponent<PlayerInputManager>();
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
+        // TODO: Test this with multiple controllers
+        if (!playerInputManager.joiningEnabled) return;
+        else if (playerPairs.Count == gameValues.MaxPlayerControllerCount)
+        {
+            playerInputManager.DisableJoining();
+        }
+
         Debug.Log("Player Pair Joined");
         playerPairs.Add(playerInput);
 

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2b673221b33bd4db3c3aedbcb76071, type: 3}
+  m_Name: GameValues
+  m_EditorClassIdentifier: 
+  <MaxPlayerControllerCount>k__BackingField: 2
+  <MovingSpeed>k__BackingField: 113.8
+  <TurnSpeed>k__BackingField: 0.2
+  <PlayerMass>k__BackingField: 50
+  <PlayerCutRange>k__BackingField: 1
+  <SomeValue>k__BackingField: 1
+  <FuelBurnRate>k__BackingField: 1
+  <FuelFillSpeed>k__BackingField: 3
+  <FireFuelDrain>k__BackingField: 1
+  <FireFuelStartAmount>k__BackingField: 10
+  <FireLightIntensityFactor>k__BackingField: 1
+  <FireLightRangeFactor>k__BackingField: 10

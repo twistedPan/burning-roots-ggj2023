@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d7508ee80db0f4e8e2eb3afa59054d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameValues: {fileID: 11400000, guid: 06628c60a5a2f5548b7504970c603d43, type: 2}
   playerIds: []
   playerPrefab: {fileID: 5717576326787305360, guid: 682c4cf4b2ff83840bbb46d80eab8602, type: 3}
   spawnRadius: 26
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 0
-  m_MaxPlayerCount: 2
+  m_MaxPlayerCount: 10
   m_AllowJoining: 1
   m_JoinBehavior: 0
   m_PlayerJoinedEvent:

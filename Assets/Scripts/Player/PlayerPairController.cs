@@ -12,11 +12,14 @@ public class PlayerPairController : MonoBehaviour
     [SerializeField] GameObject playerPrefab;
     private DynamicCamera cameraScript;
 
+    private void Awake()
+    {
+        managedPlayers = new Player[2];
+        cameraScript = FindObjectOfType<DynamicCamera>();
+    }
 
     void Start()
     {
-        cameraScript = FindObjectOfType<DynamicCamera>();
-        managedPlayers = new Player[2];
     }
 
     public void OnMovePlayer1(InputValue value)
@@ -55,7 +58,7 @@ public class PlayerPairController : MonoBehaviour
         managedPlayers[1].Action();
     }
 
-    public void OnJoinPlayer1(InputValue value)
+    public void OnJoinPlayer1()
     {
         if (managedPlayers[0] != null)
         {

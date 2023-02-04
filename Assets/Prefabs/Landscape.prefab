@@ -237,6 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43066748f911495e94cee5ec5c0c9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fuleDrain: 0.2
+  gameValues: {fileID: 11400000, guid: 06628c60a5a2f5548b7504970c603d43, type: 2}
   _flames: {fileID: 0}
-  _fuelLevel: 10
+  _currentFuelLevel: 0

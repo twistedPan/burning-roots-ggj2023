@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FirePit : MonoBehaviour
 {
-    [SerializeField] private float _fuleDrain = 1f;
+    [SerializeField] private GameValues gameValues;
     [SerializeField] private GameObject _flames = null;
+    [SerializeField] private float _currentFuelLevel = 0f;
     private Light _light = null;
-    [SerializeField] private float _fuelLevel = 10f;
     private float _fuelToFill = 0f;
-    private float _fillSpeed = 3f;
-    private float _tmp_fuelIntace = 0f;
+    private float _tmp_fuelIntake = 0f;
 
     void Start()
     {
         _light = _flames.transform.GetChild(1).GetComponent<Light>();
+        _currentFuelLevel = gameValues.FireFuelStartAmount;
     }
 
     void Update()
@@ -25,19 +25,21 @@ public class FirePit : MonoBehaviour
 
     private void updateFuel()
     {
-        _tmp_fuelIntace = _fillSpeed * Time.deltaTime;
-        if (_fuelToFill >= _tmp_fuelIntace)
+        _tmp_fuelIntake = gameValues.FuelFillSpeed * Time.deltaTime;
+        if (_fuelToFill >= _tmp_fuelIntake)
         {
-            _fuelLevel += _tmp_fuelIntace;
-            _fuelToFill -= _tmp_fuelIntace;
+            _currentFuelLevel += _tmp_fuelIntake;
+            _fuelToFill -= _tmp_fuelIntake;
         }
-        _fuelLevel -= _fuleDrain * Time.deltaTime;
+        _currentFuelLevel -= gameValues.FireFuelDrain * Time.deltaTime;
+        // TODO: Drain -> linear abflachend gegen 0
     }
 
     private void updateFire()
     {
-        _flames.transform.localScale = new Vector3(_fuelLevel * 2, _fuelLevel * 2, _fuelLevel * 2);
-        _light.range = _fuelLevel * 10;
+        _flames.transform.localScale = new Vector3(_currentFuelLevel, _currentFuelLevel, _currentFuelLevel);
+        _light.range = _currentFuelLevel * gameValues.FireLightRangeFactor;
+        _light.intensity = _currentFuelLevel * gameValues.FireLightIntensityFactor;
 
         // TODO: Flicker
 
@@ -45,7 +47,7 @@ public class FirePit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Root")
+        if (collision.gameObject.CompareTag("Root"))
         {
             _fuelToFill += collision.rigidbody.mass;
             Destroy(collision.gameObject);
