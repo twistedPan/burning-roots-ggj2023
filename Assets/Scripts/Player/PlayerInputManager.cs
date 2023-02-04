@@ -127,6 +127,8 @@ public class PlayerInputManager : MonoBehaviour
 
     private void Action(string playerId)
     {
+        if (!playersByPlayerId.ContainsKey(playerId)) return;
+
         playersByPlayerId[playerId].Action();
     }
 

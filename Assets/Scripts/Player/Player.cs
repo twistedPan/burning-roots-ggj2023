@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVeloc;
 
+    // For Fun
+    [SerializeField] private GameObject bulletPrefab;
+
     void Start()
     {
         playerTransform = transform;
@@ -41,5 +44,9 @@ public class Player : MonoBehaviour
     public void Action()
     {
         Debug.Log(transform.name + ": I do ze aktion!");
+
+        // haha
+        GameObject bullet = Instantiate(bulletPrefab, transform.position + transform.forward, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 100, ForceMode.Impulse);
     }
 }

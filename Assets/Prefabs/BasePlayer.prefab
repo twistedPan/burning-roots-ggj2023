@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 55
+  bulletPrefab: {fileID: 5384525523349706682, guid: d031cecbd25e80a448d5c33d7a3e6142, type: 3}
 --- !u!1 &5717576327407576624
 GameObject:
   m_ObjectHideFlags: 0
