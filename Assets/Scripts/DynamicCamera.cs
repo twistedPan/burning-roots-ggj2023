@@ -7,8 +7,8 @@ using UnityEngine;
 public class DynamicCamera : MonoBehaviour
 {
     [SerializeField] private Dictionary<string, Transform> playerTransformsByPlayerId;
-    [SerializeField] private float minZoom = 80f;
-    [SerializeField] private float maxZoom = 10f;
+    [SerializeField] private float minZoom = 90f;
+    [SerializeField] private float maxZoom = 40f;
     private float width = 0f;
     private float height = 0f;
     private Camera cam = null;
