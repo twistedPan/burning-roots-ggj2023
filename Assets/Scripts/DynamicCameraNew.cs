@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DynamicCamera : MonoBehaviour
+public class DynamicCameraNew : MonoBehaviour
 {
     [SerializeField] private Dictionary<string, Transform> playerTransformsByPlayerId;
     [SerializeField] private GameObject[] playerTransforms;
@@ -28,7 +28,7 @@ public class DynamicCamera : MonoBehaviour
         centreBetweenPlayers = transform.position;
         cam = GetComponent<Camera>();
 
-        foreach (GameObject g in playerTransforms)
+        foreach(GameObject g in playerTransforms)
         {
             playerTransformsByPlayerId.Add(g.name, g.transform);
         }
@@ -43,15 +43,15 @@ public class DynamicCamera : MonoBehaviour
         else
         {
             centreBetweenPlayers = GetCentreBetweenPlayers();
-            Vector3 newPos = new Vector3(centreBetweenPlayers.x, defaultHeigth + height / 4 + width / 8, centreBetweenPlayers.z - 30);
+            Vector3 newPos = new Vector3(centreBetweenPlayers.x, defaultHeigth + height/4 + width/8, centreBetweenPlayers.z - 30);
             cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position, newPos, ref velocity, smoothTime);
             cameraTransform.rotation = Quaternion.Euler(Mathf.Lerp(60, 75, height / 135f), 0, 0);
         }
 
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, Mathf.Lerp(maxZoom, minZoom, ((width > height * cam.aspect) ? width / 200f : height / 100f)), Time.deltaTime);
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, Mathf.Lerp(maxZoom, minZoom, ((width > height*cam.aspect) ? width / 200f : height / 100f)), Time.deltaTime );
     }
 
-    public void AddPlayerToCamera(string playerId, Transform playerTransform)
+    public void AddPlayerToCamera(string playerId,Transform playerTransform)
     {
         if (playerTransformsByPlayerId.ContainsKey(playerId)) return;
         playerTransformsByPlayerId.Add(playerId, playerTransform);

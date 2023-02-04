@@ -10,6 +10,7 @@ public class FirePit : MonoBehaviour
     [SerializeField] private float _fuelLevel = 10f;
     private float _fuelToFill = 0f;
     private float _fillSpeed = 3f;
+    private float _tmp_fuelIntace = 0f;
 
     void Start()
     {
@@ -24,10 +25,11 @@ public class FirePit : MonoBehaviour
 
     private void updateFuel()
     {
-        if (_fuelToFill >= _fillSpeed)
+        _tmp_fuelIntace = _fillSpeed * Time.deltaTime;
+        if (_fuelToFill >= _tmp_fuelIntace)
         {
-            _fuelLevel += _fillSpeed * Time.deltaTime;
-            _fuelToFill -= _fillSpeed * Time.deltaTime;
+            _fuelLevel += _tmp_fuelIntace;
+            _fuelToFill -= _tmp_fuelIntace;
         }
         _fuelLevel -= _fuleDrain * Time.deltaTime;
     }
