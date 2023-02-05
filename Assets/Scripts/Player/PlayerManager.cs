@@ -7,15 +7,17 @@ using UnityEngine.InputSystem;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private GameValues gameValues;
-    [SerializeField] private List<string> playerIds;
     [SerializeField] private GameObject playerPrefab;
     private List<PlayerInput> playerPairs;
     [SerializeField] private float spawnRadius = 8f;
     private PlayerInputManager playerInputManager;
     [field:SerializeField] public Transform[] PossibleSpawnPoints { get; private set; }
+    [SerializeField] private Material[] playerMaterials;
+    private int materialIndex;
 
     void Awake()
     {
+        materialIndex = 0;
         playerPairs = new List<PlayerInput>();
         playerInputManager = GetComponent<PlayerInputManager>();
     }
@@ -46,6 +48,11 @@ public class PlayerManager : MonoBehaviour
         {
             playerInputManager.DisableJoining();
         }
+    }
+
+    public Material GetMaterialForPlayer()
+    {
+        return playerMaterials[materialIndex++ % playerMaterials.Length];
     }
 }
 

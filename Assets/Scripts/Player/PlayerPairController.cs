@@ -84,10 +84,13 @@ public class PlayerPairController : MonoBehaviour
             GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
             string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
+            
             managedPlayers[index] = newPlayer.GetComponent<Player>();
             managedPlayers[index].PlayerId = playerId;
+            managedPlayers[index].SetMaterial(playerManager.GetMaterialForPlayer());
+
             cameraScript.AddPlayerToCamera(playerId, newPlayer.transform);
-            Debug.Log("- Player " + (index + 1) + " joined! - Id " + playerId);
+            // Debug.Log("- Player " + (index + 1) + " joined! - Id " + playerId);
         }
         else
         {

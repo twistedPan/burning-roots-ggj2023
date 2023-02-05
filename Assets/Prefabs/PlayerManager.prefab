@@ -177,6 +177,12 @@ MonoBehaviour:
   - {fileID: 7972469274146138936}
   - {fileID: 384632854311779762}
   - {fileID: 241625497515757544}
+  playerMaterials:
+  - {fileID: 2100000, guid: 1ed7855025ef6c640858bb4587393942, type: 2}
+  - {fileID: 2100000, guid: b21dee8d26c28454dbc39b83deba6d7c, type: 2}
+  - {fileID: 2100000, guid: 8d150ab05c6f4c345b870f11d55fae2d, type: 2}
+  - {fileID: 2100000, guid: ab7829ced87f81e4d802469a55a94f8b, type: 2}
+  - {fileID: 2100000, guid: bafbeec98d3a082458b9e80295f50a48, type: 2}
 --- !u!114 &6523721642864338501
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,9 +10,12 @@ public class Player : MonoBehaviour
     private Interaction cutInteraction;
     private Vector2 movement;
     private float turnSmoothVeloc;
+    [SerializeField] private GameObject playerModel;
+    private MeshRenderer meshRenderer;
 
-    void Start()
+    private void Awake()
     {
+        meshRenderer = playerModel.GetComponent<MeshRenderer>();
         playerTransform = transform;
         rigidBody = GetComponent<Rigidbody>();
         cutInteraction = GetComponent<Interaction>();
@@ -45,5 +48,10 @@ public class Player : MonoBehaviour
     {
         //Debug.Log(transform.name + ": I do ze aktion!");
         cutInteraction.TrySplitObject();
+    }
+
+    public void SetMaterial(Material mat)
+    {
+        meshRenderer.material = mat;
     }
 }
