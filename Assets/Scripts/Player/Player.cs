@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
         meshRenderers.Add(playerBladeModel.GetComponent<SkinnedMeshRenderer>());
         meshRenderers.Add(playerHoverPadModel.GetComponent<SkinnedMeshRenderer>());
 
-        Debug.Log("Anim Name " + cutAnimation.name);
     }
 
     void FixedUpdate()
@@ -59,9 +58,8 @@ public class Player : MonoBehaviour
 
     public void Action()
     {
-        //Debug.Log(transform.name + ": I do ze aktion!");
         cutInteraction.TrySplitObject();
-        cutAnimation.Play("Cinema_4D_Basis");
+        cutAnimation.Play();
     }
 
     public void SetMaterial(Material[] mats)

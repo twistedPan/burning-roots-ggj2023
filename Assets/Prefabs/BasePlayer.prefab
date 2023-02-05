@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 1792331580927343817}
   - component: {fileID: 5717576326787305361}
   - component: {fileID: 5391784623808647010}
-  - component: {fileID: 4513540145118739786}
+  - component: {fileID: 7107815985627555472}
   m_Layer: 6
   m_Name: BasePlayer
   m_TagString: Untagged
@@ -287,7 +287,6 @@ MonoBehaviour:
   playerDetailModel: {fileID: 6752414202794430812}
   playerBladeModel: {fileID: 6053104738818342581}
   playerHoverPadModel: {fileID: 5977889828087713547}
-  cutAnimation: {fileID: 0}
 --- !u!114 &5391784623808647010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameValues: {fileID: 11400000, guid: 06628c60a5a2f5548b7504970c603d43, type: 2}
   _splitAsync: 1
---- !u!111 &4513540145118739786
+--- !u!111 &7107815985627555472
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
