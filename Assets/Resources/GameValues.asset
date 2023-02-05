@@ -22,7 +22,7 @@ MonoBehaviour:
   <FuelBurnRate>k__BackingField: 10
   <FireNewFuelIntakeSpeed>k__BackingField: 100
   <FireFuelMaxDrainSpeed>k__BackingField: 100
-  <FireFuelStartAmount>k__BackingField: 800
+  <FireFuelStartAmount>k__BackingField: 500
   <FireLightIntensityFactor>k__BackingField: 8
   <FireLightRangeFactor>k__BackingField: 1
   <FireSizeFactor>k__BackingField: 0.05

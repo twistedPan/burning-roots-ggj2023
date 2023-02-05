@@ -16,6 +16,7 @@ public class FirePit : MonoBehaviour
     private Light _light = null;
     private float _fuelToFill = 0f;
     private float _tmp_fuelIntake = 0f;
+    [SerializeField] private bool isMenuFire = false;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class FirePit : MonoBehaviour
 
     void Update()
     {
+        if (isMenuFire) return;
         updateFuel();
         updateFire();
     }
