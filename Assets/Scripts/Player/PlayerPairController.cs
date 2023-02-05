@@ -57,22 +57,25 @@ public class PlayerPairController : MonoBehaviour
         managedPlayers[1].Action();
     }
 
-    public void OnJoinPlayer1()
+    public void OnJoinPlayer1(InputValue value)
     {
+
+        Debug.Log("value " + value);
         if (managedPlayers[0] != null)
         {
             RemovePlayer(managedPlayers[0]);
             managedPlayers[0] = null;
             return;
         }
-        //Debug.Log("Player 1 joined!");
+
+        Debug.Log("Player 1 joined!");
         Vector3 spawnPosition = GetSpawnPosition();
         GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
         string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
         managedPlayers[0] = newPlayer.GetComponent<Player>();
         managedPlayers[0].PlayerId = playerId;
-        cameraScript.AddPlayerToCamera(playerId + (int)(Random.value*5), newPlayer.transform);
+        cameraScript.AddPlayerToCamera(playerId, newPlayer.transform);
     }
 
     public void OnJoinPlayer2()
@@ -83,14 +86,15 @@ public class PlayerPairController : MonoBehaviour
             managedPlayers[1] = null;
             return;
         }
-        //Debug.Log("Player 2 joined!");
+
+        Debug.Log("Player 2 joined!");
         Vector3 spawnPosition = GetSpawnPosition();
         GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
         string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
         managedPlayers[1] = newPlayer.GetComponent<Player>();
         managedPlayers[1].PlayerId = playerId;
-        cameraScript.AddPlayerToCamera(playerId + (int)(Random.value * 5), newPlayer.transform);
+        cameraScript.AddPlayerToCamera(playerId, newPlayer.transform);
     }
 
     private void RemovePlayer(Player player)
@@ -101,7 +105,7 @@ public class PlayerPairController : MonoBehaviour
 
     private Vector3 GetSpawnPosition()
     {
-        int index = Random.Range(0, playerManager.PossibleSpawnPoints.Length + 1);
+        int index = Random.Range(0, playerManager.PossibleSpawnPoints.Length);
         Vector3 randomSpawnPosition = playerManager.PossibleSpawnPoints[index].position;
         Vector3 spawnPositionXZ = new Vector3(
             randomSpawnPosition.x + (Random.Range(-1,1) * gameValues.PlayerSpawnPosDeviation), 
