@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +8,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private GameValues gameValues;
     [SerializeField] private GameObject playerPrefab;
     private List<PlayerInput> playerPairs;
-    [SerializeField] private float spawnRadius = 8f;
     private PlayerInputManager playerInputManager;
     [field:SerializeField] public Transform[] PossibleSpawnPoints { get; private set; }
     [SerializeField] private Material[] playerMaterials;
