@@ -11,11 +11,11 @@ public class Player : MonoBehaviour
     private Vector2 movement;
     private float turnSmoothVeloc;
     [SerializeField] private GameObject playerModel;
-    private MeshRenderer meshRenderer;
+    private SkinnedMeshRenderer meshRenderer;
 
     private void Awake()
     {
-        meshRenderer = playerModel.GetComponent<MeshRenderer>();
+        meshRenderer = playerModel.GetComponent<SkinnedMeshRenderer>();
         playerTransform = transform;
         rigidBody = GetComponent<Rigidbody>();
         cutInteraction = GetComponent<Interaction>();
