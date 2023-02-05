@@ -21,12 +21,8 @@ public class PlayerManager : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        // TODO: Test this with multiple controllers
         if (!playerInputManager.joiningEnabled) return;
-        else if (playerPairs.Count == gameValues.MaxPlayerControllerCount)
-        {
-            playerInputManager.DisableJoining();
-        }
+
 
         Debug.Log("Player Pair Joined");
         playerPairs.Add(playerInput);
@@ -43,6 +39,11 @@ public class PlayerManager : MonoBehaviour
                 break;
             default:
                 break;
+        }
+
+        if (playerPairs.Count == gameValues.MaxPlayerControllerCount)
+        {
+            playerInputManager.DisableJoining();
         }
     }
 }

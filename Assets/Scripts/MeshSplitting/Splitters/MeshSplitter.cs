@@ -220,7 +220,7 @@ namespace JL.Splitting
             MeshCollider newCollider = go.AddComponent<MeshCollider>();
             Rigidbody rb = go.GetComponent<Rigidbody>();
 
-            if (rb.mass <= 800) // Weight Here
+            if (rb.mass <= 2400) // Weight Here
             {
                 newCollider.convex = true;
                 rb.isKinematic = false;

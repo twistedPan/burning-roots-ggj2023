@@ -12,16 +12,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2b673221b33bd4db3c3aedbcb76071, type: 3}
   m_Name: GameValues
   m_EditorClassIdentifier: 
-  <MaxPlayerControllerCount>k__BackingField: 2
+  <MaxPlayerControllerCount>k__BackingField: 4
   <MovingSpeed>k__BackingField: 90
   <TurnSpeed>k__BackingField: 0.2
   <PlayerMass>k__BackingField: 50
   <PlayerCutRange>k__BackingField: 4
   <SomeValue>k__BackingField: 1
-  <FuelBurnRate>k__BackingField: 1
-  <FuelFillSpeed>k__BackingField: 3
-  <FireFuelDrain>k__BackingField: 0.1
-  <FireFuelStartAmount>k__BackingField: 50
-  <FireLightIntensityFactor>k__BackingField: 11.81
-  <FireLightRangeFactor>k__BackingField: 10
-  <FireSizeFactor>k__BackingField: 0.313
+  <FuelBurnRate>k__BackingField: 10
+  <FireFuelIntakeSpeed>k__BackingField: 3
+  <FireFuelMaxDrainSpeed>k__BackingField: 100
+  <FireFuelStartAmount>k__BackingField: 400
+  <FireLightIntensityFactor>k__BackingField: 8
+  <FireLightRangeFactor>k__BackingField: 1
+  <FireSizeFactor>k__BackingField: 0.46
+  <FireMaxFuelLevel>k__BackingField: 800
+  <FireFuelBurnCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.40264934
+      value: 0.12342781
+      inSlope: -6.71669
+      outSlope: -6.71669
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.08448531
+    - serializedVersion: 3
+      time: 0.4497533
+      value: 0.46888512
+      inSlope: 0.87851065
+      outSlope: 0.87851065
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50932634
+      value: 0.0070518553
+      inSlope: 11.233758
+      outSlope: 11.233758
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.53012913
+      value: 0.9266217
+      inSlope: 1.0634918
+      outSlope: 1.0634918
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6226814
+      value: 0.38773212
+      inSlope: 1.2453628
+      outSlope: 1.2453628
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

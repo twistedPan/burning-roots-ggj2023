@@ -25,14 +25,18 @@ public class FirePit : MonoBehaviour
 
     private void updateFuel()
     {
-        _tmp_fuelIntake = gameValues.FuelFillSpeed * Time.deltaTime;
+        _tmp_fuelIntake = gameValues.FireFuelIntakeSpeed * Time.deltaTime;
         if (_fuelToFill >= _tmp_fuelIntake)
         {
             _currentFuelLevel += _tmp_fuelIntake;
             _fuelToFill -= _tmp_fuelIntake;
         }
-        _currentFuelLevel -= gameValues.FireFuelDrain * Time.deltaTime;
-        // TODO: Drain -> linear abflachend gegen 0
+
+        float approxFuelDrainSpeed = gameValues.FireFuelBurnCurve.Evaluate(D_Utilities.MapRange(_currentFuelLevel, 0, gameValues.FireMaxFuelLevel, .1f, 1)) * gameValues.FireFuelMaxDrainSpeed;
+        _currentFuelLevel -= approxFuelDrainSpeed * Time.deltaTime;
+
+        Debug.Log("approxFuelDrainSpeed: " + approxFuelDrainSpeed + " Evaluate: " + gameValues.FireFuelBurnCurve.Evaluate(D_Utilities.MapRange(_currentFuelLevel, 0, gameValues.FireMaxFuelLevel, .1f, 1)));
+        if (_currentFuelLevel > gameValues.FireMaxFuelLevel) _currentFuelLevel = gameValues.FireMaxFuelLevel;
     }
 
     private void updateFire()

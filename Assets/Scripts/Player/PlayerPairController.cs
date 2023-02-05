@@ -66,7 +66,7 @@ public class PlayerPairController : MonoBehaviour
             managedPlayers[0] = null;*/
             return;
         }
-        Debug.Log("Player 1 joined!");
+        //Debug.Log("Player 1 joined!");
         Vector2 spawnPosition = new Vector3(30 + (5 * Random.value), 0, 30 + (5 * Random.value));
         Vector3 spawnPositionXZ = new Vector3(spawnPosition.x, 1, spawnPosition.y);
         GameObject newPlayer = Instantiate(playerPrefab, spawnPositionXZ, Quaternion.identity);
@@ -83,7 +83,7 @@ public class PlayerPairController : MonoBehaviour
             managedPlayers[1] = null;*/
             return;
         }
-        Debug.Log("Player 2 joined!");
+        //Debug.Log("Player 2 joined!");
         Vector2 spawnPosition = new Vector3(30 + (5 * Random.value), 0, 30 + (5 * Random.value));
         Vector3 spawnPositionXZ = new Vector3(spawnPosition.x, 1, spawnPosition.y);
         GameObject newPlayer = Instantiate(playerPrefab, spawnPositionXZ, Quaternion.identity);
