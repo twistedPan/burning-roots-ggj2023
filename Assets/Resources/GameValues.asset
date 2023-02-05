@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GameValues
   m_EditorClassIdentifier: 
   <MaxPlayerControllerCount>k__BackingField: 4
+  <PlayerSpawnPosDeviation>k__BackingField: 3
   <MovingSpeed>k__BackingField: 90
   <TurnSpeed>k__BackingField: 0.2
   <PlayerMass>k__BackingField: 50
@@ -59,4 +60,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  <PrintCurrentFuelLevel>k__BackingField: 1
+  <PrintCurrentFuelLevel>k__BackingField: 0

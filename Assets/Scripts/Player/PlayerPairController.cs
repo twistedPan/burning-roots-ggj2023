@@ -8,18 +8,17 @@ using Random = UnityEngine.Random;
 
 public class PlayerPairController : MonoBehaviour
 {
-    [SerializeField] Player[] managedPlayers;
-    [SerializeField] GameObject playerPrefab;
+    [SerializeField] private GameValues gameValues;
+    [SerializeField] private Player[] managedPlayers;
+    [SerializeField] private GameObject playerPrefab;
     private DynamicCamera cameraScript;
+    private PlayerManager playerManager;
 
     private void Awake()
     {
         managedPlayers = new Player[2];
         cameraScript = FindObjectOfType<DynamicCamera>();
-    }
-
-    void Start()
-    {
+        playerManager = FindObjectOfType<PlayerManager>();
     }
 
     public void OnMovePlayer1(InputValue value)
@@ -67,9 +66,8 @@ public class PlayerPairController : MonoBehaviour
             return;
         }
         //Debug.Log("Player 1 joined!");
-        Vector2 spawnPosition = new Vector3(30 + (5 * Random.value), 0, 30 + (5 * Random.value));
-        Vector3 spawnPositionXZ = new Vector3(spawnPosition.x, 1, spawnPosition.y);
-        GameObject newPlayer = Instantiate(playerPrefab, spawnPositionXZ, Quaternion.identity);
+        Vector3 spawnPosition = GetSpawnPosition();
+        GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
         managedPlayers[0] = newPlayer.GetComponent<Player>();
         cameraScript.AddPlayerToCamera("noId"+ (int)(Random.value*5), newPlayer.transform);
@@ -84,9 +82,8 @@ public class PlayerPairController : MonoBehaviour
             return;
         }
         //Debug.Log("Player 2 joined!");
-        Vector2 spawnPosition = new Vector3(30 + (5 * Random.value), 0, 30 + (5 * Random.value));
-        Vector3 spawnPositionXZ = new Vector3(spawnPosition.x, 1, spawnPosition.y);
-        GameObject newPlayer = Instantiate(playerPrefab, spawnPositionXZ, Quaternion.identity);
+        Vector3 spawnPosition = GetSpawnPosition();
+        GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
         managedPlayers[1] = newPlayer.GetComponent<Player>();
         cameraScript.AddPlayerToCamera("noId" + (int)(Random.value * 5), newPlayer.transform);
@@ -96,5 +93,18 @@ public class PlayerPairController : MonoBehaviour
     {
         cameraScript.RemovePlayerFromCamera("no id");
         Destroy(player.gameObject);
+    }
+
+    private Vector3 GetSpawnPosition()
+    {
+        int index = Random.Range(0, playerManager.PossibleSpawnPoints.Length + 1);
+        Vector3 randomSpawnPosition = playerManager.PossibleSpawnPoints[index].position;
+        Vector3 spawnPositionXZ = new Vector3(
+            randomSpawnPosition.x + (Random.Range(-1,1) * gameValues.PlayerSpawnPosDeviation), 
+            .5f, 
+            randomSpawnPosition.z + (Random.Range(-1, 1) * gameValues.PlayerSpawnPosDeviation));
+
+        Debug.Log("Player spawned at " + index +" got " + randomSpawnPosition + " is " + spawnPositionXZ);
+        return spawnPositionXZ;
     }
 }

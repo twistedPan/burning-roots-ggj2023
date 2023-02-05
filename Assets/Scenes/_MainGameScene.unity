@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 36462200}
   - component: {fileID: 36462199}
   - component: {fileID: 36462198}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (1)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 330214369}
   - component: {fileID: 330214368}
   - component: {fileID: 330214367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (9)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6523721642864338498, guid: f793d5e44affd6342b3a15a2a752c9d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6523721642864338498, guid: f793d5e44affd6342b3a15a2a752c9d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 439846615}
   - component: {fileID: 439846614}
   - component: {fileID: 439846613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (10)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 455808824}
   - component: {fileID: 455808823}
   - component: {fileID: 455808822}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (5)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 1216515186}
   - component: {fileID: 1216515185}
   - component: {fileID: 1216515184}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (6)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -1296,7 +1296,7 @@ GameObject:
   - component: {fileID: 1239787404}
   - component: {fileID: 1239787403}
   - component: {fileID: 1239787402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (2)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 1266208818}
   - component: {fileID: 1266208817}
   - component: {fileID: 1266208816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (4)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 1450448221}
   - component: {fileID: 1450448220}
   - component: {fileID: 1450448219}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (7)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 1467554287}
   - component: {fileID: 1467554286}
   - component: {fileID: 1467554285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (8)
   m_TagString: Root
   m_Icon: {fileID: 0}
@@ -2376,7 +2376,7 @@ GameObject:
   - component: {fileID: 2111285590}
   - component: {fileID: 2111285589}
   - component: {fileID: 2111285588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RBCube (3)
   m_TagString: Root
   m_Icon: {fileID: 0}

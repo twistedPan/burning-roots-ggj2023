@@ -170,5 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4110faa1ab7eac3448c937fe54afe126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
+  gameValues: {fileID: 11400000, guid: 06628c60a5a2f5548b7504970c603d43, type: 2}
+  managedPlayers: []
   playerPrefab: {fileID: 5717576326787305360, guid: 682c4cf4b2ff83840bbb46d80eab8602, type: 3}

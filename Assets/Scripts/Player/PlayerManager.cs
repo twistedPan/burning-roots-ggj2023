@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     private List<PlayerInput> playerPairs;
     [SerializeField] private float spawnRadius = 8f;
     private PlayerInputManager playerInputManager;
+    [field:SerializeField] public Transform[] PossibleSpawnPoints { get; private set; }
 
     void Awake()
     {
