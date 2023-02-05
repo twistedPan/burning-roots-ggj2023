@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3366169319918271657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4255351304939269610}
   - component: {fileID: 9180552490329100736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShovelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7665401249459375607}
   - component: {fileID: 7413781620175729059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TestBodyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399212218696225065}
   - component: {fileID: 8032361094056738709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 1792331580927343817}
   - component: {fileID: 5717576326787305361}
   - component: {fileID: 5391784623808647010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BasePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 8709747182148083312}
   - component: {fileID: 4502036510123990416}
   - component: {fileID: 7421586862872560031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3691454951747668574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,6 +464,10 @@ PrefabInstance:
       value: Beehicle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9853be3aa657ec4d9e4573ccb00ddf9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9853be3aa657ec4d9e4573ccb00ddf9, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -533,9 +537,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beehicle_hitbox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 801c5e6ba69f00449bb1c9f27d039acd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277699767009188023, guid: 801c5e6ba69f00449bb1c9f27d039acd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3102752390795779382, guid: 801c5e6ba69f00449bb1c9f27d039acd, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488948362677329360, guid: 801c5e6ba69f00449bb1c9f27d039acd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 801c5e6ba69f00449bb1c9f27d039acd, type: 3}
@@ -640,6 +656,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d4b3a59a0f0e05644b830f2b0c2607b4, type: 3}
       propertyPath: m_Name
       value: testvolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4b3a59a0f0e05644b830f2b0c2607b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4b3a59a0f0e05644b830f2b0c2607b4, type: 3}
       propertyPath: m_IsActive

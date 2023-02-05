@@ -141,6 +141,9 @@ namespace JL.Splitting
             GameObject posObject = GameObject.Instantiate(rootObject, rootObject.transform.parent);
             GameObject negObject = rootObject;
 
+            posObject.layer = 3;
+            negObject.layer = 3;
+
             MeshFilter posMeshFilter = posObject.GetComponentInChildren<MeshFilter>();
             MeshFilter negMeshFilter = negObject.GetComponentInChildren<MeshFilter>();
             posMeshFilter.sharedMesh = meshSplitData.posMeshData.CreateMesh(originalMesh.name);
