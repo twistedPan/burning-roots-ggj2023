@@ -10,6 +10,8 @@ public class FirePit : MonoBehaviour
     [SerializeField] private float _currentFuelLevel = 0f;
     [SerializeField] private GameObject frost;
     [SerializeField] private GameObject UIElem;
+    [SerializeField] private GameObject particleGameObject;
+    private ParticleSystem fireParticleSystem;
     private RectTransform frostImg;
     private Light _light = null;
     private float _fuelToFill = 0f;
@@ -19,8 +21,10 @@ public class FirePit : MonoBehaviour
     {
         _light = _flames.transform.GetChild(1).GetComponent<Light>();
         _currentFuelLevel = gameValues.FireFuelStartAmount;
-        
-        
+        fireParticleSystem = particleGameObject.GetComponent<ParticleSystem>();
+
+
+
         Debug.Log(frost);
         frostImg = frost.GetComponent<RectTransform>();
         Debug.Log(frostImg);
@@ -76,6 +80,7 @@ public class FirePit : MonoBehaviour
         {
             _fuelToFill += collision.rigidbody.mass;
             Destroy(collision.gameObject);
+            fireParticleSystem.Play();
         }
     }
 }
