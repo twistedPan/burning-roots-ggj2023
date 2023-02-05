@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000017033932, g: 0.000000025772884, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.000017033939, g: 0.000000025772884, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1143,6 +1143,10 @@ PrefabInstance:
       value: Landscape
       objectReference: {fileID: 0}
     - target: {fileID: 9008841585386265631, guid: 8e3f0b82d699045af8cc3cf59b56bcde, type: 3}
+      propertyPath: frost
+      value: 
+      objectReference: {fileID: 1316350856}
+    - target: {fileID: 9008841585386265631, guid: 8e3f0b82d699045af8cc3cf59b56bcde, type: 3}
       propertyPath: _flames
       value: 
       objectReference: {fileID: 404634518}
@@ -1594,6 +1598,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266208813}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1316350856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7426346562711739828, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
+  m_PrefabInstance: {fileID: 1884883711}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1450448216
 GameObject:
   m_ObjectHideFlags: 0
