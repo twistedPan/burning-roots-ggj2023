@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         if (SceneManager.GetActiveScene().name == "_MainGameScene")
         {
             menuPanel.SetActive(false);
@@ -15,6 +16,7 @@ public class MenuController : MonoBehaviour
 
     public void OnPlay()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 

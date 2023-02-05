@@ -1117,6 +1117,11 @@ Transform:
   m_Father: {fileID: 1862226455}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &967904183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8776343986138633785, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
+  m_PrefabInstance: {fileID: 1884883711}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1065223238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1278,10 @@ PrefabInstance:
       propertyPath: frost
       value: 
       objectReference: {fileID: 1316350856}
+    - target: {fileID: 9008841585386265631, guid: 8e3f0b82d699045af8cc3cf59b56bcde, type: 3}
+      propertyPath: UIElem
+      value: 
+      objectReference: {fileID: 967904183}
     - target: {fileID: 9008841585386265631, guid: 8e3f0b82d699045af8cc3cf59b56bcde, type: 3}
       propertyPath: _flames
       value: 
@@ -2309,11 +2318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8776343985844687253, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 866
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 8776343985844687253, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -448
+      value: -501
       objectReference: {fileID: 0}
     - target: {fileID: 8776343985914214715, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
       propertyPath: m_Name
@@ -2421,11 +2430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8776343985942105868, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 866
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 8776343985942105868, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -526
+      value: -579
       objectReference: {fileID: 0}
     - target: {fileID: 8776343986138633785, guid: c9750d07ccef88d4aa5457b7fef33915, type: 3}
       propertyPath: m_IsActive

@@ -9,6 +9,7 @@ public class FirePit : MonoBehaviour
     [SerializeField] private GameObject _flames = null;
     [SerializeField] private float _currentFuelLevel = 0f;
     [SerializeField] private GameObject frost;
+    [SerializeField] private GameObject UIElem;
     private RectTransform frostImg;
     private Light _light = null;
     private float _fuelToFill = 0f;
@@ -49,6 +50,12 @@ public class FirePit : MonoBehaviour
         {
             float scale = D_Utilities.MapRange(_currentFuelLevel, 0, (float)(gameValues.FireMaxFuelLevel * 0.3), 1.5f, 3);
             frostImg.transform.localScale = new Vector3(scale, scale,1);
+        }
+
+        if (_currentFuelLevel <= 0)
+        {
+            Time.timeScale = 0;
+            UIElem.SetActive(true);
         }
     }
 
