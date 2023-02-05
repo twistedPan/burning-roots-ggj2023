@@ -5159,3 +5159,4 @@ MonoBehaviour:
   _currentFuelLevel: 0
   frost: {fileID: 0}
   UIElem: {fileID: 0}
+  particleGameObject: {fileID: 1808307573371550602}
