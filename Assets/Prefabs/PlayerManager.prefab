@@ -169,20 +169,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameValues: {fileID: 11400000, guid: 06628c60a5a2f5548b7504970c603d43, type: 2}
-  playerIds: []
   playerPrefab: {fileID: 5717576326787305360, guid: 682c4cf4b2ff83840bbb46d80eab8602, type: 3}
-  spawnRadius: 26
   <PossibleSpawnPoints>k__BackingField:
   - {fileID: 4748566882418363151}
   - {fileID: 7972469274146138936}
   - {fileID: 384632854311779762}
   - {fileID: 241625497515757544}
-  playerMaterials:
-  - {fileID: 2100000, guid: 1ed7855025ef6c640858bb4587393942, type: 2}
-  - {fileID: 2100000, guid: b21dee8d26c28454dbc39b83deba6d7c, type: 2}
-  - {fileID: 2100000, guid: 8d150ab05c6f4c345b870f11d55fae2d, type: 2}
-  - {fileID: 2100000, guid: ab7829ced87f81e4d802469a55a94f8b, type: 2}
-  - {fileID: 2100000, guid: bafbeec98d3a082458b9e80295f50a48, type: 2}
+  bodyMaterials:
+  - {fileID: 2100000, guid: ffdaec40f140945a1b17f753fb853165, type: 2}
+  - {fileID: 2100000, guid: c9fa08dcf66e6409c80e3768d7fb4a8f, type: 2}
+  - {fileID: 2100000, guid: 3f12ea576e788476a92bcb33de5f2c9b, type: 2}
+  - {fileID: 2100000, guid: bdd109b5f3f9743789c2046c337e55f3, type: 2}
+  - {fileID: 2100000, guid: a029ef416808d4d178d35b996484352d, type: 2}
+  detailsMaterials:
+  - {fileID: 2100000, guid: 9d78f7f7a0726489a9f2162e6f9057d5, type: 2}
+  - {fileID: 2100000, guid: ca048279f0b8c448a8bbfd467f6ec066, type: 2}
+  - {fileID: 2100000, guid: 8d09d34f243da4a0d907e9bbe62dcc73, type: 2}
+  - {fileID: 2100000, guid: ee97725accbc24d79870e6e4332ddf7f, type: 2}
+  - {fileID: 2100000, guid: 37872d5ec09964e45b2c71ff7b078663, type: 2}
+  bladeMaterials:
+  - {fileID: 2100000, guid: cf2c3b60d0398419cb04f21553359bf2, type: 2}
+  - {fileID: 2100000, guid: b343e4c2ae30546fa9c3e9fc92f1cbef, type: 2}
+  - {fileID: 2100000, guid: ee88feb4edde04892bec9bca24c745da, type: 2}
+  - {fileID: 2100000, guid: 27104fc7e6ae84929ab54f5187d166b6, type: 2}
+  - {fileID: 2100000, guid: 1210167925bab4ed9b6fe5e27d306a99, type: 2}
+  hoverpadMaterials:
+  - {fileID: 2100000, guid: 3173d93f0136242389c6af50c23429f1, type: 2}
+  - {fileID: 2100000, guid: 84168b6de6fad407db1114ffc770cac0, type: 2}
+  - {fileID: 2100000, guid: 9d3fe1e24eee9457183de6a2c725072a, type: 2}
+  - {fileID: 2100000, guid: 912580ceddb674e7888c28cf0c2ef2c0, type: 2}
+  - {fileID: 2100000, guid: 1aaae7a40182f433bbb219ec7d8c4528, type: 2}
 --- !u!114 &6523721642864338501
 MonoBehaviour:
   m_ObjectHideFlags: 0

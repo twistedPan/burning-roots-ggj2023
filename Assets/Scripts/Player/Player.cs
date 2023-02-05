@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,16 +11,28 @@ public class Player : MonoBehaviour
     private Interaction cutInteraction;
     private Vector2 movement;
     private float turnSmoothVeloc;
-    [SerializeField] private GameObject playerModel;
-    private SkinnedMeshRenderer meshRenderer;
+    [SerializeField] private GameObject playerBodyModel;
+    [SerializeField] private GameObject playerDetailModel;
+    [SerializeField] private GameObject playerBladeModel;
+    [SerializeField] private GameObject playerHoverPadModel;
+    private Animation cutAnimation;
+    private List<SkinnedMeshRenderer> meshRenderers;
 
     private void Awake()
     {
-        meshRenderer = playerModel.GetComponent<SkinnedMeshRenderer>();
         playerTransform = transform;
         rigidBody = GetComponent<Rigidbody>();
         cutInteraction = GetComponent<Interaction>();
         rigidBody.mass = gameValues.PlayerMass;
+        cutAnimation = GetComponent<Animation>();
+
+        meshRenderers = new List<SkinnedMeshRenderer>();
+        meshRenderers.Add(playerBodyModel.GetComponent<SkinnedMeshRenderer>());
+        meshRenderers.Add(playerDetailModel.GetComponent<SkinnedMeshRenderer>());
+        meshRenderers.Add(playerBladeModel.GetComponent<SkinnedMeshRenderer>());
+        meshRenderers.Add(playerHoverPadModel.GetComponent<SkinnedMeshRenderer>());
+
+        Debug.Log("Anim Name " + cutAnimation.name);
     }
 
     void FixedUpdate()
@@ -48,10 +61,15 @@ public class Player : MonoBehaviour
     {
         //Debug.Log(transform.name + ": I do ze aktion!");
         cutInteraction.TrySplitObject();
+        cutAnimation.Play("Cinema_4D_Basis");
     }
 
-    public void SetMaterial(Material mat)
+    public void SetMaterial(Material[] mats)
     {
-        meshRenderer.material = mat;
+        for (int i = 0; i < meshRenderers.Count; i++)
+        {
+            SkinnedMeshRenderer meshRend = meshRenderers[i];
+            meshRend.material = mats[i];
+        }
     }
 }
