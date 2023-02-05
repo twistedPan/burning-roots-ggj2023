@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FirePit : MonoBehaviour
 {
     [SerializeField] private GameValues gameValues;
     [SerializeField] private GameObject _flames = null;
     [SerializeField] private float _currentFuelLevel = 0f;
+    [SerializeField] private GameObject frost;
+    private RectTransform frostImg;
     private Light _light = null;
     private float _fuelToFill = 0f;
     private float _tmp_fuelIntake = 0f;
@@ -15,6 +18,11 @@ public class FirePit : MonoBehaviour
     {
         _light = _flames.transform.GetChild(1).GetComponent<Light>();
         _currentFuelLevel = gameValues.FireFuelStartAmount;
+        
+        
+        Debug.Log(frost);
+        frostImg = frost.GetComponent<RectTransform>();
+        Debug.Log(frostImg);
     }
 
     void Update()
@@ -37,6 +45,11 @@ public class FirePit : MonoBehaviour
 
         if (gameValues.PrintCurrentFuelLevel) Debug.Log("Current Level: " + _currentFuelLevel + "\nCurrent Drain Speed: " + approxFuelDrainSpeed + "\n Position on Curve: " + gameValues.FireFuelBurnCurve.Evaluate(D_Utilities.MapRange(_currentFuelLevel, 0, gameValues.FireMaxFuelLevel, .1f, 1)));
         if (_currentFuelLevel > gameValues.FireMaxFuelLevel) _currentFuelLevel = gameValues.FireMaxFuelLevel;
+        if (_currentFuelLevel < gameValues.FireMaxFuelLevel * 0.3)
+        {
+            float scale = D_Utilities.MapRange(_currentFuelLevel, 0, (float)(gameValues.FireMaxFuelLevel * 0.3), 1.5f, 3);
+            frostImg.transform.localScale = new Vector3(scale, scale,1);
+        }
     }
 
     private void updateFire()
