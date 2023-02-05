@@ -61,37 +61,41 @@ public class PlayerPairController : MonoBehaviour
     {
         if (managedPlayers[0] != null)
         {
-            /*RemovePlayer(managedPlayers[0]);
-            managedPlayers[0] = null;*/
+            RemovePlayer(managedPlayers[0]);
+            managedPlayers[0] = null;
             return;
         }
         //Debug.Log("Player 1 joined!");
         Vector3 spawnPosition = GetSpawnPosition();
         GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
+        string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
         managedPlayers[0] = newPlayer.GetComponent<Player>();
-        cameraScript.AddPlayerToCamera("noId"+ (int)(Random.value*5), newPlayer.transform);
+        managedPlayers[0].PlayerId = playerId;
+        cameraScript.AddPlayerToCamera(playerId + (int)(Random.value*5), newPlayer.transform);
     }
 
     public void OnJoinPlayer2()
     {
         if (managedPlayers[1] != null)
         {
-            /*RemovePlayer(managedPlayers[1]);
-            managedPlayers[1] = null;*/
+            RemovePlayer(managedPlayers[1]);
+            managedPlayers[1] = null;
             return;
         }
         //Debug.Log("Player 2 joined!");
         Vector3 spawnPosition = GetSpawnPosition();
         GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
+        string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
         managedPlayers[1] = newPlayer.GetComponent<Player>();
-        cameraScript.AddPlayerToCamera("noId" + (int)(Random.value * 5), newPlayer.transform);
+        managedPlayers[1].PlayerId = playerId;
+        cameraScript.AddPlayerToCamera(playerId + (int)(Random.value * 5), newPlayer.transform);
     }
 
     private void RemovePlayer(Player player)
     {
-        cameraScript.RemovePlayerFromCamera("no id");
+        cameraScript.RemovePlayerFromCamera(player.PlayerId);
         Destroy(player.gameObject);
     }
 
