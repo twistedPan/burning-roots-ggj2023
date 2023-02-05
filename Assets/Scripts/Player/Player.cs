@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         cutInteraction = GetComponent<Interaction>();
         rigidBody.mass = gameValues.PlayerMass;
-        cutAnimation = GetComponent<Animation>();
+        cutAnimation = transform.Find("Beehicle_rigged_2").GetComponent<Animation>();
 
         meshRenderers = new List<SkinnedMeshRenderer>();
         meshRenderers.Add(playerBodyModel.GetComponent<SkinnedMeshRenderer>());
@@ -58,8 +58,15 @@ public class Player : MonoBehaviour
 
     public void Action()
     {
+        if (cutAnimation.IsPlaying("Cinema_4D_Basis")) return;
+        cutAnimation.Play("Cinema_4D_Basis");
+        Invoke("cutIt", 0.5f);
+        
+    }
+
+    private void cutIt()
+    {
         cutInteraction.TrySplitObject();
-        cutAnimation.Play();
     }
 
     public void SetMaterial(Material[] mats)
