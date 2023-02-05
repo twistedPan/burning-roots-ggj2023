@@ -236,6 +236,7 @@ namespace JL.Splitting
             newCollider.sharedMesh = mesh;
 
             meshFilter.sharedMesh = tempMesh;
+            go.GetComponent<Splittable>().SplitForce = rb.mass / 20f;
         }
         #endregion
 

@@ -56,6 +56,7 @@ public class FirePit : MonoBehaviour
         {
             Time.timeScale = 0;
             UIElem.SetActive(true);
+
         }
     }
 
