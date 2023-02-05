@@ -5,6 +5,7 @@ public class GameValues : ScriptableObject
 {
     [field: SerializeField, Header("Game")]
     public float MaxPlayerControllerCount { get; private set; } = 2f;
+    [field: SerializeField, Range(0, 10)] public float PlayerSpawnPosDeviation { get; private set; } = 0.0f;
 
 
     [field: SerializeField, Header("Player")]
