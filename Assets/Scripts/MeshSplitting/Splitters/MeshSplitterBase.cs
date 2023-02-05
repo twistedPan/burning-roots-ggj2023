@@ -816,9 +816,9 @@ namespace JL.Splitting
 
                 if (splitForce > 0)
                 {
-                    float ratio = posBody.mass / negBody.mass;
-                    posBody.AddForce(plane.normal * posBody.mass * (splitForce* ratio), ForceMode.Impulse);
-                    negBody.AddForce(plane.normal * negBody.mass * (-splitForce / ratio), ForceMode.Impulse);
+                    float ratio = D_Utilities.MapRange(posBody.mass, 0, originalMass, 0,1);
+                    posBody.AddForce(plane.normal * posBody.mass * 0.5f * (splitForce * ratio), ForceMode.Impulse);
+                    negBody.AddForce(plane.normal * negBody.mass * 0.5f * (-splitForce * (1-ratio)), ForceMode.Impulse);
                 }
             }
         }
