@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2b673221b33bd4db3c3aedbcb76071, type: 3}
   m_Name: GameValues
   m_EditorClassIdentifier: 
-  <MaxPlayerControllerCount>k__BackingField: 4
+  <MaxPlayerControllerCount>k__BackingField: 20
   <PlayerSpawnPosDeviation>k__BackingField: 3
-  <MovingSpeed>k__BackingField: 90
+  <MovingSpeed>k__BackingField: 80
   <TurnSpeed>k__BackingField: 0.2
   <PlayerMass>k__BackingField: 50
   <PlayerCutRange>k__BackingField: 4
@@ -22,7 +22,7 @@ MonoBehaviour:
   <FuelBurnRate>k__BackingField: 10
   <FireNewFuelIntakeSpeed>k__BackingField: 100
   <FireFuelMaxDrainSpeed>k__BackingField: 100
-  <FireFuelStartAmount>k__BackingField: 500
+  <FireFuelStartAmount>k__BackingField: 800
   <FireLightIntensityFactor>k__BackingField: 8
   <FireLightRangeFactor>k__BackingField: 1
   <FireSizeFactor>k__BackingField: 0.05
