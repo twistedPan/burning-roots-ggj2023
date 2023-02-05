@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.Rendering.DebugUI;
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 public class PlayerPairController : MonoBehaviour
@@ -13,12 +13,16 @@ public class PlayerPairController : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     private DynamicCamera cameraScript;
     private PlayerManager playerManager;
+    private Stopwatch swPlayer1;
+    private Stopwatch swPlayer2;
 
     private void Awake()
     {
         managedPlayers = new Player[2];
         cameraScript = FindObjectOfType<DynamicCamera>();
         playerManager = FindObjectOfType<PlayerManager>();
+        swPlayer1 = new Stopwatch();
+        swPlayer2 = new Stopwatch();
     }
 
     public void OnMovePlayer1(InputValue value)
@@ -59,42 +63,46 @@ public class PlayerPairController : MonoBehaviour
 
     public void OnJoinPlayer1(InputValue value)
     {
-
-        Debug.Log("value " + value);
-        if (managedPlayers[0] != null)
-        {
-            RemovePlayer(managedPlayers[0]);
-            managedPlayers[0] = null;
-            return;
-        }
-
-        Debug.Log("Player 1 joined!");
-        Vector3 spawnPosition = GetSpawnPosition();
-        GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
-
-        string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
-        managedPlayers[0] = newPlayer.GetComponent<Player>();
-        managedPlayers[0].PlayerId = playerId;
-        cameraScript.AddPlayerToCamera(playerId, newPlayer.transform);
+        JoinPlayer(value.isPressed, swPlayer1, 0);
     }
 
-    public void OnJoinPlayer2()
+    public void OnJoinPlayer2(InputValue value)
     {
-        if (managedPlayers[1] != null)
+        JoinPlayer(value.isPressed, swPlayer2, 1);
+    }
+
+    private void JoinPlayer(bool isPressed, Stopwatch sw, int index)
+    {
+        if (isPressed == true)
         {
-            RemovePlayer(managedPlayers[1]);
-            managedPlayers[1] = null;
-            return;
+            sw.Start();
         }
 
-        Debug.Log("Player 2 joined!");
-        Vector3 spawnPosition = GetSpawnPosition();
-        GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
+        if (managedPlayers[index] == null)
+        {
+            Vector3 spawnPosition = GetSpawnPosition();
+            GameObject newPlayer = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
-        string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
-        managedPlayers[1] = newPlayer.GetComponent<Player>();
-        managedPlayers[1].PlayerId = playerId;
-        cameraScript.AddPlayerToCamera(playerId, newPlayer.transform);
+            string playerId = newPlayer.GetInstanceID() + "-" + (int)(Random.value * 5);
+            managedPlayers[index] = newPlayer.GetComponent<Player>();
+            managedPlayers[index].PlayerId = playerId;
+            cameraScript.AddPlayerToCamera(playerId, newPlayer.transform);
+            Debug.Log("- Player " + (index + 1) + " joined! - Id " + playerId);
+        }
+        else
+        {
+            if (sw.Elapsed.TotalMilliseconds >= 500f)
+            {
+                RemovePlayer(managedPlayers[index]);
+                managedPlayers[index] = null;
+            }
+        }
+
+        if (isPressed == false)
+        {
+            sw.Stop();
+            sw.Reset();
+        }
     }
 
     private void RemovePlayer(Player player)
@@ -108,11 +116,10 @@ public class PlayerPairController : MonoBehaviour
         int index = Random.Range(0, playerManager.PossibleSpawnPoints.Length);
         Vector3 randomSpawnPosition = playerManager.PossibleSpawnPoints[index].position;
         Vector3 spawnPositionXZ = new Vector3(
-            randomSpawnPosition.x + (Random.Range(-1,1) * gameValues.PlayerSpawnPosDeviation), 
-            .5f, 
+            randomSpawnPosition.x + (Random.Range(-1, 1) * gameValues.PlayerSpawnPosDeviation),
+            .5f,
             randomSpawnPosition.z + (Random.Range(-1, 1) * gameValues.PlayerSpawnPosDeviation));
 
-        Debug.Log("Player spawned at " + index +" got " + randomSpawnPosition + " is " + spawnPositionXZ);
         return spawnPositionXZ;
     }
 }

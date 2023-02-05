@@ -36,7 +36,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""JoinPlayer1"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""d2035b38-c253-4248-a1bd-aa3ad415730a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -44,7 +44,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""JoinPlayer2"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""5def77bd-2a45-4846-97bd-85cacb2ec156"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -188,7 +188,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""JoinPlayer3"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""f3fd74ff-2716-421a-8ec2-33b8bff13def"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -196,7 +196,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""JoinPlayer4"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""983dc3f0-4686-4210-b2f3-a2ea911b5f6e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
