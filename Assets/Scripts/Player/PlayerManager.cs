@@ -10,7 +10,10 @@ public class PlayerManager : MonoBehaviour
     private List<PlayerInput> playerPairs;
     private PlayerInputManager playerInputManager;
     [field:SerializeField] public Transform[] PossibleSpawnPoints { get; private set; }
-    [SerializeField] private Material[] playerMaterials;
+    [SerializeField] private Material[] bodyMaterials;
+    [SerializeField] private Material[] detailsMaterials;
+    [SerializeField] private Material[] bladeMaterials;
+    [SerializeField] private Material[] hoverpadMaterials;
     private int materialIndex;
 
     void Awake()
@@ -48,9 +51,14 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public Material GetMaterialForPlayer()
+    public Material[] GetMaterialForPlayer()
     {
-        return playerMaterials[materialIndex++ % playerMaterials.Length];
+        Material[] mats = new Material[4];
+        mats[0] = bodyMaterials[materialIndex++ % bodyMaterials.Length];
+        mats[1] = detailsMaterials[UnityEngine.Random.Range(0, 4)];
+        mats[2] = bladeMaterials[UnityEngine.Random.Range(0, 4)];
+        mats[3] = hoverpadMaterials[UnityEngine.Random.Range(0, 4)];
+        return mats;
     }
 }
 
