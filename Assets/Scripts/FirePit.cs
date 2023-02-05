@@ -25,7 +25,7 @@ public class FirePit : MonoBehaviour
 
     private void updateFuel()
     {
-        _tmp_fuelIntake = gameValues.FireFuelIntakeSpeed * Time.deltaTime;
+        _tmp_fuelIntake = gameValues.FireNewFuelIntakeSpeed * Time.deltaTime;
         if (_fuelToFill >= _tmp_fuelIntake)
         {
             _currentFuelLevel += _tmp_fuelIntake;
@@ -35,7 +35,7 @@ public class FirePit : MonoBehaviour
         float approxFuelDrainSpeed = gameValues.FireFuelBurnCurve.Evaluate(D_Utilities.MapRange(_currentFuelLevel, 0, gameValues.FireMaxFuelLevel, .1f, 1)) * gameValues.FireFuelMaxDrainSpeed;
         _currentFuelLevel -= approxFuelDrainSpeed * Time.deltaTime;
 
-        Debug.Log("approxFuelDrainSpeed: " + approxFuelDrainSpeed + " Evaluate: " + gameValues.FireFuelBurnCurve.Evaluate(D_Utilities.MapRange(_currentFuelLevel, 0, gameValues.FireMaxFuelLevel, .1f, 1)));
+        if (gameValues.PrintCurrentFuelLevel) Debug.Log("Current Level: " + _currentFuelLevel + "\nCurrent Drain Speed: " + approxFuelDrainSpeed + "\n Position on Curve: " + gameValues.FireFuelBurnCurve.Evaluate(D_Utilities.MapRange(_currentFuelLevel, 0, gameValues.FireMaxFuelLevel, .1f, 1)));
         if (_currentFuelLevel > gameValues.FireMaxFuelLevel) _currentFuelLevel = gameValues.FireMaxFuelLevel;
     }
 

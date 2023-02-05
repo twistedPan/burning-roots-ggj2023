@@ -19,12 +19,12 @@ MonoBehaviour:
   <PlayerCutRange>k__BackingField: 4
   <SomeValue>k__BackingField: 1
   <FuelBurnRate>k__BackingField: 10
-  <FireFuelIntakeSpeed>k__BackingField: 3
+  <FireNewFuelIntakeSpeed>k__BackingField: 100
   <FireFuelMaxDrainSpeed>k__BackingField: 100
-  <FireFuelStartAmount>k__BackingField: 400
+  <FireFuelStartAmount>k__BackingField: 800
   <FireLightIntensityFactor>k__BackingField: 8
   <FireLightRangeFactor>k__BackingField: 1
-  <FireSizeFactor>k__BackingField: 0.46
+  <FireSizeFactor>k__BackingField: 0.05
   <FireMaxFuelLevel>k__BackingField: 800
   <FireFuelBurnCurve>k__BackingField:
     serializedVersion: 2
@@ -39,46 +39,10 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.40264934
-      value: 0.12342781
-      inSlope: -6.71669
-      outSlope: -6.71669
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.08448531
-    - serializedVersion: 3
-      time: 0.4497533
-      value: 0.46888512
-      inSlope: 0.87851065
-      outSlope: 0.87851065
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.50932634
-      value: 0.0070518553
-      inSlope: 11.233758
-      outSlope: 11.233758
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.53012913
-      value: 0.9266217
-      inSlope: 1.0634918
-      outSlope: 1.0634918
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6226814
-      value: 0.38773212
-      inSlope: 1.2453628
-      outSlope: 1.2453628
+      time: 0.012936294
+      value: 0.002306722
+      inSlope: 0.29103023
+      outSlope: 0.29103023
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -95,3 +59,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  <PrintCurrentFuelLevel>k__BackingField: 1
