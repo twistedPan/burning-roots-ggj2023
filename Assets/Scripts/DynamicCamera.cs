@@ -9,6 +9,7 @@ public class DynamicCamera : MonoBehaviour
     [SerializeField] private Dictionary<string, Transform> playerTransformsByPlayerId;
     [SerializeField] private float minZoom = 90f;
     [SerializeField] private float maxZoom = 40f;
+    public int PlayerAmount { get; private set; } = 0;
     private float width = 0f;
     private float height = 0f;
     private Camera cam = null;
@@ -49,6 +50,7 @@ public class DynamicCamera : MonoBehaviour
     {
         if (playerTransformsByPlayerId.ContainsKey(playerId)) return;
         playerTransformsByPlayerId.Add(playerId, playerTransform);
+        PlayerAmount++;
     }
 
     public void RemovePlayerFromCamera(string playerId)
@@ -56,6 +58,7 @@ public class DynamicCamera : MonoBehaviour
         if (playerTransformsByPlayerId.ContainsKey(playerId))
         {
             playerTransformsByPlayerId.Remove(playerId);
+            PlayerAmount--;
         }
     }
 

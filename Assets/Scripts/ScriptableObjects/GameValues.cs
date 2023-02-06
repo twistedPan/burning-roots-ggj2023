@@ -29,5 +29,7 @@ public class GameValues : ScriptableObject
     [field: SerializeField, Range(0.01f,.1f)] public float FireSizeFactor { get; private set; } = .5f;
     [field: SerializeField] public float FireMaxFuelLevel { get; private set; } = 800f;
     [field: SerializeField] public AnimationCurve FireFuelBurnCurve { get; private set; }
-    [field: SerializeField] public bool PrintCurrentFuelLevel { get; private set; } = false;
+    [field: SerializeField] public float FireBurnDownStartDelay { get; private set; } = 5f;
+
+    [field: SerializeField, Header("Debugging")] public bool PrintCurrentFuelLevel { get; private set; } = false;
 }

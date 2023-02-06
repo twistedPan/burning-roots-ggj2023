@@ -16,13 +16,13 @@ MonoBehaviour:
   <PlayerSpawnPosDeviation>k__BackingField: 3
   <MovingSpeed>k__BackingField: 80
   <TurnSpeed>k__BackingField: 0.2
-  <PlayerMass>k__BackingField: 50
+  <PlayerMass>k__BackingField: 60
   <PlayerCutRange>k__BackingField: 4
   <SomeValue>k__BackingField: 1
   <FuelBurnRate>k__BackingField: 10
   <FireNewFuelIntakeSpeed>k__BackingField: 100
   <FireFuelMaxDrainSpeed>k__BackingField: 100
-  <FireFuelStartAmount>k__BackingField: 800
+  <FireFuelStartAmount>k__BackingField: 600
   <FireLightIntensityFactor>k__BackingField: 8
   <FireLightRangeFactor>k__BackingField: 1
   <FireSizeFactor>k__BackingField: 0.05
@@ -60,4 +60,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  <FireBurnDownStartDelay>k__BackingField: 5
   <PrintCurrentFuelLevel>k__BackingField: 0
